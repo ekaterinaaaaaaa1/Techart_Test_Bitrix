@@ -1,0 +1,1 @@
+# Techart_Test_Bitrix
