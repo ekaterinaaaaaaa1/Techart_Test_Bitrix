@@ -1,0 +1,7 @@
+@import "style.css";
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 300px;
+}
