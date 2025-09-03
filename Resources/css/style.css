@@ -172,11 +172,21 @@ h2 {
     color: #FFF;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
     header {
-        height: 121px;
-    }
+        height: 220px;
+        flex-direction: column;
+        justify-content: space-around;
 
+    }
+    nav {
+        margin: auto;
+        padding-right: 0;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 500px) {
     .header-logo-link {
         width: 300px;
         gap: 18.5px;

@@ -21,16 +21,20 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             <img class="header-logo" src="<?=SITE_TEMPLATE_PATH?>/Resources/img/logo.svg" alt="Логотип"></img>
             <span class="header-logo-title">Галактический вестник</span>
         </a>
-        <nav>
-            <ul class="topmenu">
-                <li><a href="#">Текарт</a>
-                    <ul class="submenu">
-                        <li><a href="/techart/about.php">О компании</a></li>
-                        <li><a href="/tachart/contacts.php">Контакты</a></li>
-                    </ul>
-                </li>
-                <li><a href="/index.php">Главная</a></li>
-                <li><a href="/news/list.php">Новости</a></li>
-            </ul>
-        </nav>
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:menu",
+            "top_menu",
+            Array(
+                "ALLOW_MULTI_SELECT" => "N",
+                "CHILD_MENU_TYPE" => "",
+                "DELAY" => "N",
+                "MAX_LEVEL" => "2",
+                "MENU_CACHE_GET_VARS" => array(""),
+                "MENU_CACHE_TIME" => "3600",
+                "MENU_CACHE_TYPE" => "N",
+                "MENU_CACHE_USE_GROUPS" => "Y",
+                "ROOT_MENU_TYPE" => "top",
+                "USE_EXT" => "N"
+            )
+        );?>
     </header>
