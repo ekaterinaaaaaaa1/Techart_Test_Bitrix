@@ -7,6 +7,10 @@
     color: #000;
 }
 
+ul {
+      list-style: none;
+}
+
 p {
     font-size: 1.25rem;
 }
@@ -21,13 +25,15 @@ body {
 }
 
 header {
+    display: flex;
     height: 157px;
     border-bottom: 1px solid #6C6E7B;
+    justify-content: space-between;
 }
 
 .header-logo-link {
     display: inline-flex;
-    width: 390px;
+    width: 410px;
     height: 47%;
     gap: 24px;
     padding: 40px 0 43px 10%;
@@ -45,6 +51,55 @@ header {
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.75rem;
     letter-spacing: 0.25rem;
+}
+
+nav {
+    width: 280px;
+    padding-right: 10%;
+}
+
+.topmenu {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
+
+.topmenu > li {
+    width: 33%;
+    position: relative;
+    text-align: center;
+}
+
+.topmenu > li > a {
+    font-size: 1.2rem;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #2C145E;
+}
+
+ul li:hover {
+    a {
+        color: #2C145E;
+    }
+    .submenu {
+        visibility: visible;
+        a {
+            color: #000;
+        }
+        a:hover {
+            color: #2C145E;
+        }
+    }
 }
 
 footer {
