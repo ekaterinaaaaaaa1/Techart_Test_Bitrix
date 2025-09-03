@@ -13,6 +13,7 @@
 $this->setFrameMode(true);
 ?>
 
+<?php if(!empty($arResult["ITEMS"][0])): ?>
 <div class="news-banner">
     <img class="news-banner-img" src="<?= $arResult["ITEMS"][0]["DETAIL_PICTURE"]["SRC"]; ?>" alt="Новость"></img>
     <div class="news-banner-text">
@@ -20,3 +21,4 @@ $this->setFrameMode(true);
         <?= $arResult["ITEMS"][0]["PREVIEW_TEXT"]; ?>
     </div>
 </div>
+<?php endif; ?>

@@ -22,13 +22,13 @@ $this->setFrameMode(true);
 			<p class="news-announce"><?= isset($arItem["PREVIEW_TEXT"]) ? $arItem["PREVIEW_TEXT"] : ''; ?></p>
 			<a class="button news-button" href="<?= $arItem["DETAIL_PAGE_URL"]; ?>">
 				<span class="button-text">Подробнее </span>
-				<img class="button-arrow" src="/local/templates/main/Resources/img/icons/arrow.svg" data-active="/local/templates/main/Resources/img/icons/active_arrow.svg" alt="Стрелка"></img>
+				<img class="button-arrow" src="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/arrow.svg"; ?>" data-active="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/active_arrow.svg"; ?>" alt="Стрелка"></img>
 			</a>
 		</div>
 		<?php } ?>
 	</div>
-<?php endif; ?>
 
 <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
 	<?= $arResult["NAV_STRING"] ?>
 <? endif; ?>
+<?php endif; ?>

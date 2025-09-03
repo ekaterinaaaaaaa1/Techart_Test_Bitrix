@@ -19,22 +19,22 @@ $this->setFrameMode(true);
             <span class="menu-news-title">Главная</span=>
         </a>
         <span class="menu-news-title"> / </span>
-        <span><?= $arResult['NAME']; ?></span>
+        <span><?= isset($arResult['NAME']) ? $arResult['NAME'] : ''; ?></span>
     </div>
-    <h1><?= $arResult['NAME']; ?></h1>
+    <h1><?= isset($arResult['NAME']) ? $arResult['NAME'] : ''; ?></h1>
     <div class="news">
         <div class="news-content news-message">
-            <span class="news-date"><?= date('d.m.Y', strtotime($arResult['TAGS'])); ?></span>
-            <h2 class="news-announce"><?= $arResult['PREVIEW_TEXT']; ?></h2>
-            <?= $arResult['DETAIL_TEXT']; ?>
+            <span class="news-date"><?= isset($arResult['TAGS']) ? date('d.m.Y', strtotime($arResult['TAGS'])) : ''; ?></span>
+            <h2 class="news-announce"><?= isset($arResult['PREVIEW_TEXT']) ? $arResult['PREVIEW_TEXT'] : ''; ?></h2>
+            <?= isset($arResult['DETAIL_TEXT']) ? $arResult['DETAIL_TEXT'] : ''; ?>
             <a class="button news-button" href="/list.php">
-                <img class="button-arrow" src="/local/templates/main/Resources/img/icons/reverse_arrow.svg" data-active="/local/templates/main/Resources/img/icons/active_reverse_arrow.svg" alt="Стрелка"></img>
+                <img class="button-arrow" src="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/reverse_arrow.svg"; ?>" data-active="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/active_reverse_arrow.svg"; ?>" alt="Стрелка"></img>
                 <span class="button-text">Назад к новостям</span>
             </a>
         </div>
         <div class="news-content">
             <div class="news-img-block">
-                <img class="news-img" src="<?= $arResult["DETAIL_PICTURE"]["SRC"]; ?>" alt="Новость">
+                <img class="news-img" src="<?= isset($arResult["DETAIL_PICTURE"]["SRC"]) ? $arResult["DETAIL_PICTURE"]["SRC"] : ''; ?>" alt="Новость">
             </div>
         </div>
     </div>
