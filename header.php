@@ -26,7 +26,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             "top_menu",
             Array(
                 "ALLOW_MULTI_SELECT" => "N",
-                "CHILD_MENU_TYPE" => "",
+                "CHILD_MENU_TYPE" => "subtop",
                 "DELAY" => "N",
                 "MAX_LEVEL" => "2",
                 "MENU_CACHE_GET_VARS" => array(""),
@@ -34,7 +34,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 "MENU_CACHE_TYPE" => "N",
                 "MENU_CACHE_USE_GROUPS" => "Y",
                 "ROOT_MENU_TYPE" => "top",
-                "USE_EXT" => "N"
+                "USE_EXT" => "Y"
             )
         );?>
     </header>

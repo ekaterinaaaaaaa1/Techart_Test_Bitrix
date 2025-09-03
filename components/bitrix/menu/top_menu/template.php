@@ -13,18 +13,23 @@
 $this->setFrameMode(true);
 ?>
 
+
 <?php if(!empty($arResult)): ?>
 <nav>
     <ul class="topmenu">
         <?php foreach ($arResult as $item): ?>
-            <li><a href="<?= $item['LINK']; ?>"><?= $item['TEXT']; ?></a></li>
-        <!-- <li><a href="#">Текарт</a>
-            <ul class="submenu">
-                <li><a href="/techart/about.php">О компании</a></li>
-                <li><a href="/tachart/contacts.php">Контакты</a></li>
-            </ul>
-        </li> -->
+            <li><a href="<?= $item['LINK']; ?>"><?= $item['TEXT']; ?></a>
+            <?php if(!empty($item['SUBITEMS'])): ?>
+                <ul class="submenu">
+                    <?php foreach ($item['SUBITEMS'] as $subItem):?>
+                        <li><a href="<?= $subItem['LINK']; ?>"><?= $subItem['TEXT']; ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+            </li>
         <?php endforeach; ?>
     </ul>
 </nav>
 <?php endif; ?>
+
+

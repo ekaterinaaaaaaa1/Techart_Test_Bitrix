@@ -12,6 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+<per><? print_r($arResult);?><per>
 <?php if ($arResult['ID']): ?>
 <div class="container">
     <div class="menu">
@@ -27,6 +28,12 @@ $this->setFrameMode(true);
             <span class="news-date"><?= isset($arResult['TAGS']) ? date('d.m.Y', strtotime($arResult['TAGS'])) : ''; ?></span>
             <h2 class="news-announce"><?= isset($arResult['PREVIEW_TEXT']) ? $arResult['PREVIEW_TEXT'] : ''; ?></h2>
             <?= isset($arResult['DETAIL_TEXT']) ? $arResult['DETAIL_TEXT'] : ''; ?>
+            <div>
+                <span>Темы:</span>
+                <?foreach ($arResult['DISPLAY_PROPERTIES']['THEMES']['LINK_ELEMENT_VALUE'] as $theme):?>
+                    <span><?= " " . $theme . ","?></span>
+                <?endforeach;?>
+            </div>
             <a class="button news-button" href="/news/list.php">
                 <img class="button-arrow" src="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/reverse_arrow.svg"; ?>" data-active="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/active_reverse_arrow.svg"; ?>" alt="Стрелка"></img>
                 <span class="button-text">Назад к новостям</span>
