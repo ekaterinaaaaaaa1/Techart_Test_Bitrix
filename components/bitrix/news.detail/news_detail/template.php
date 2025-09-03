@@ -15,7 +15,7 @@ $this->setFrameMode(true);
 <?php if ($arResult['ID']): ?>
 <div class="container">
     <div class="menu">
-        <a href="/list.php">
+        <a href="/news/list.php">
             <span class="menu-news-title">Главная</span=>
         </a>
         <span class="menu-news-title"> / </span>
@@ -27,7 +27,7 @@ $this->setFrameMode(true);
             <span class="news-date"><?= isset($arResult['TAGS']) ? date('d.m.Y', strtotime($arResult['TAGS'])) : ''; ?></span>
             <h2 class="news-announce"><?= isset($arResult['PREVIEW_TEXT']) ? $arResult['PREVIEW_TEXT'] : ''; ?></h2>
             <?= isset($arResult['DETAIL_TEXT']) ? $arResult['DETAIL_TEXT'] : ''; ?>
-            <a class="button news-button" href="/list.php">
+            <a class="button news-button" href="/news/list.php">
                 <img class="button-arrow" src="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/reverse_arrow.svg"; ?>" data-active="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/active_reverse_arrow.svg"; ?>" alt="Стрелка"></img>
                 <span class="button-text">Назад к новостям</span>
             </a>
