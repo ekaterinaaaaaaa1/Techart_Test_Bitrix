@@ -12,7 +12,6 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
 <?php if(!empty($arResult["ITEMS"])): ?>
 	<h1><?= $arResult["NAME"]?></h1>
 	<div class="news-container">
@@ -21,7 +20,7 @@ $this->setFrameMode(true);
 			<span class="news-date"><?= isset($arItem["FIELDS"]["TAGS"]) ? date('d.m.Y', strtotime($arItem["FIELDS"]["TAGS"])) : ''; ?></span>
 			<h2 class="news-title"><?= isset($arItem["NAME"]) ? $arItem["NAME"] : ''; ?></h2>
 			<p class="news-announce"><?= isset($arItem["PREVIEW_TEXT"]) ? $arItem["PREVIEW_TEXT"] : ''; ?></p>
-			<a class="button news-button" href="<?= $arIem["DETAIL_PAGE_URL"]; ?>">
+			<a class="button news-button" href="<?= $arItem["DETAIL_PAGE_URL"]; ?>">
 				<span class="button-text">Подробнее </span>
 				<img class="button-arrow" src="/local/templates/main/Resources/img/icons/arrow.svg" data-active="/local/templates/main/Resources/img/icons/active_arrow.svg" alt="Стрелка"></img>
 			</a>

@@ -10,10 +10,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">	
     <title><?$APPLICATION->ShowTitle();?></title>
-
-    <?php
-   // Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/Resources/js/News/detail_main.js");
-    ?>
     <?$APPLICATION->ShowHead();?>
 </head>
 <body>

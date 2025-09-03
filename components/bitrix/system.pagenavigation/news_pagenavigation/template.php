@@ -13,13 +13,13 @@
 $pageSwitchButtonCount = 3;
 $this->setFrameMode(true);
 ?>
-<?ECHO $arResult["NavPageNomer"];?>
+
 <div class="page-switch-buttons">
     <div class="page-switch-buttons-numbers">
         <?php
         if ($arResult["NavPageNomer"] + $pageSwitchButtonCount <= $arResult["NavPageCount"] + 1) {
             for ($i = 0; $i < $pageSwitchButtonCount; $i++): ?>
-                <a href="/list.php?PAGEN_1=<?= $arResult["NavPageNomer"] + $i; ?>">
+                <a href="/list.php?PAGEN_1=<?php echo ($arResult["NavPageNomer"] + $i); ?>">
                     <button class="button page-switch-button button-text">
                         <?php echo $arResult["NavPageNomer"] + $i; ?>
                     </button>
@@ -28,7 +28,7 @@ $this->setFrameMode(true);
         }
         else {
             for ($i = $pageSwitchButtonCount - 1; $i >= 0; $i--): ?>
-                <a href="/list.php?PAGEN_1=<?= $arResult["NavPageCount"] - $i; ?>">
+                <a href="/list.php?PAGEN_1=<?php echo ($arResult["NavPageCount"] - $i); ?>">
                     <button class="button page-switch-button button-text">
                         <?php echo $arResult["NavPageCount"] - $i; ?>
                     </button>
@@ -37,7 +37,7 @@ $this->setFrameMode(true);
         }
         ?>
     </div>
-    <a href="/list.php?PAGEN_1=<?= $arResult["NavPageNomer"] + 1; ?>">
+    <a href="/list.php?PAGEN_1=<?php echo ($arResult["NavPageNomer"] + 1); ?>">
         <button class="button page-switch-button page-switch-button-arrow" <?php if ($arResult["NavPageNomer"] == $arResult["NavPageCount"]){?>style="display: none;"<?php } ?>>
             <img class="page-switch-button-arrow-img" src="/local/templates/main/Resources/img/icons/next_page_arrow.svg" data-active="/local/templates/main/Resources/img/icons/active_next_page_arrow.svg" alt="Стрелка"></img>
         </button>
