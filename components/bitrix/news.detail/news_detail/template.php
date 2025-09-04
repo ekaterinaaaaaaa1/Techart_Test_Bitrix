@@ -29,7 +29,7 @@ $this->setFrameMode(true);
             <?= isset($arResult['DETAIL_TEXT']) ? $arResult['DETAIL_TEXT'] : ''; ?>
             <? if (!empty($arResult['DISPLAY_PROPERTIES']['THEMES'])) { ?>
             <div>
-                <? $themes = array_map(fn($element) => $element['NAME'], $arResult['DISPLAY_PROPERTIES']['THEMES']['LINK_ELEMENT_VALUE']); ?>
+                <? $themes = array_map(fn($element) => "<a href=\"/news/list.php\">" . $element['NAME'] . "</a>", $arResult['DISPLAY_PROPERTIES']['THEMES']['LINK_ELEMENT_VALUE']); ?>
                 <span>Темы: <?= implode(", ", $themes) . "."; ?></span>
             </div>
             <? }; ?>
