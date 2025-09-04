@@ -29,10 +29,7 @@ $this->setFrameMode(true);
             <?= isset($arResult['DETAIL_TEXT']) ? $arResult['DETAIL_TEXT'] : ''; ?>
             <? if (!empty($arResult['DISPLAY_PROPERTIES']['THEMES'])) { ?>
             <div>
-                <? $themes = []; //array_map
-                foreach ($arResult['DISPLAY_PROPERTIES']['THEMES']['LINK_ELEMENT_VALUE'] as $theme) {
-                    $themes[] = $theme['NAME'];
-                }; ?>
+                <? $themes = array_map(fn($element) => $element['NAME'], $arResult['DISPLAY_PROPERTIES']['THEMES']['LINK_ELEMENT_VALUE']); ?>
                 <span>Темы: <?= implode(", ", $themes) . "."; ?></span>
             </div>
             <? }; ?>
