@@ -12,7 +12,8 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?php if(!empty($arResult["ITEMS"])): ?>
+<?//PRINT_R($arResult)?>
+<? if(!empty($arResult["ITEMS"])) { ?>
 	<h1><?= $arResult["NAME"]?></h1>
 	<div class="news-container">
 		<?php foreach ($arResult["ITEMS"] as $arItem) { ?>
@@ -27,8 +28,7 @@ $this->setFrameMode(true);
 		</div>
 		<?php } ?>
 	</div>
-
-<? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
+<? if ($arParams["DISPLAY_BOTTOM_PAGER"]) { ?>
 	<?= $arResult["NAV_STRING"] ?>
-<? endif; ?>
-<?php endif; ?>
+<? }; ?>
+<?php }; ?>

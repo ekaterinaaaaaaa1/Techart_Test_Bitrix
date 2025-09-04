@@ -10,8 +10,14 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$pageSwitchButtonCount = 3;
+$pageSwitchButtonCount = $arResult["NavPageCount"] < 3 ? $arResult["NavPageCount"] : 3;
 $this->setFrameMode(true);
+?>
+<?
+    $themeParam = "";
+    if(!empty($_GET['THEME_ID'])) {
+        $themeParam = "&THEME_ID=" . $_GET['THEME_ID'];
+    }
 ?>
 
 <div class="page-switch-buttons">
@@ -19,7 +25,7 @@ $this->setFrameMode(true);
         <?php
         if ($arResult["NavPageNomer"] + $pageSwitchButtonCount <= $arResult["NavPageCount"] + 1) {
             for ($i = 0; $i < $pageSwitchButtonCount; $i++): ?>
-                <a href="/news/list.php?PAGEN_1=<?= $arResult["NavPageNomer"] + $i; ?>">
+                <a href="<?="/news/list.php?PAGEN_1=" . $arResult["NavPageNomer"] + $i . $themeParam ?>">
                     <button class="button page-switch-button button-text">
                         <?= $arResult["NavPageNomer"] + $i; ?>
                     </button>
@@ -28,7 +34,7 @@ $this->setFrameMode(true);
         }
         else {
             for ($i = $pageSwitchButtonCount - 1; $i >= 0; $i--): ?>
-                <a href="/news/list.php?PAGEN_1=<?= $arResult["NavPageCount"] - $i; ?>">
+                <a href="<?="/news/list.php?PAGEN_1=" . $arResult["NavPageCount"] - $i . $themeParam ?>">
                     <button class="button page-switch-button button-text">
                         <?= $arResult["NavPageCount"] - $i; ?>
                     </button>
@@ -37,7 +43,7 @@ $this->setFrameMode(true);
         }
         ?>
     </div>
-    <a href="/news/list.php?PAGEN_1=<?= $arResult["NavPageNomer"] + 1; ?>">
+    <a href="<?="/news/list.php?PAGEN_1=" . $arResult["NavPageNomer"] + 1 . $themeParam ?>">
         <button class="button page-switch-button page-switch-button-arrow" <?php if ($arResult["NavPageNomer"] == $arResult["NavPageCount"]){?>style="display: none;"<?php } ?>>
             <img class="page-switch-button-arrow-img" src="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/next_page_arrow.svg"; ?>" data-active="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/active_next_page_arrow.svg"; ?>" alt="Стрелка"></img>
         </button>
