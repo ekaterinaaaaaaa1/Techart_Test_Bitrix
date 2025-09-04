@@ -85,6 +85,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     border: 1px solid #2C145E;
+    background-color: #FFF;
 }
 
 ul li:hover {
