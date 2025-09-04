@@ -12,8 +12,11 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<? if(!empty($arResult["ITEMS"])) { ?>
-	
+<? if (!empty($arResult["ITEMS"])) {
+	if (empty($_GET["THEME_ID"])) {
+?>
+		<h1>Новости</h1>
+	<? }; ?>
 	<div class="news-container">
 		<?php foreach ($arResult["ITEMS"] as $arItem) { ?>
 		<div class="news">
