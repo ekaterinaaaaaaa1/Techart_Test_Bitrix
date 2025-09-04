@@ -12,9 +12,8 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?//PRINT_R($arResult)?>
 <? if(!empty($arResult["ITEMS"])) { ?>
-	<h1><?= $arResult["NAME"]?></h1>
+	
 	<div class="news-container">
 		<?php foreach ($arResult["ITEMS"] as $arItem) { ?>
 		<div class="news">

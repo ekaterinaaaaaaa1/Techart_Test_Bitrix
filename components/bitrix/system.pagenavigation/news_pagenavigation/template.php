@@ -10,7 +10,8 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$pageSwitchButtonCount = $arResult["NavPageCount"] < 3 ? $arResult["NavPageCount"] : 3;
+$maxPageSwitchButtonCount = 3;
+$pageSwitchButtonCount = $arResult["NavPageCount"] < $maxPageSwitchButtonCount ? $arResult["NavPageCount"] : $maxPageSwitchButtonCount;
 $this->setFrameMode(true);
 ?>
 <?
@@ -19,7 +20,6 @@ $this->setFrameMode(true);
         $themeParam = "&THEME_ID=" . $_GET['THEME_ID'];
     }
 ?>
-
 <div class="page-switch-buttons">
     <div class="page-switch-buttons-numbers">
         <?php
