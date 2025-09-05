@@ -1,4 +1,6 @@
 <?php
+
+
 $arPrepItems = [];
 if (!empty($arResult)) {
     foreach ($arResult as $key => $item) {

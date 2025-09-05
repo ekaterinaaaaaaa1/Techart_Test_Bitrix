@@ -12,24 +12,20 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
-
-<?php if(!empty($arResult)): ?>
+<?php if(!empty($arResult)) { ?>
 <nav>
     <ul class="topmenu">
-        <?php foreach ($arResult as $item): ?>
+        <?php foreach ($arResult as $item) { ?>
             <li><a href="<?= $item['LINK']; ?>"><?= $item['TEXT']; ?></a>
-            <?php if(!empty($item['SUBITEMS'])): ?>
+            <?php if(!empty($item['SUBITEMS'])) { ?>
                 <ul class="submenu">
-                    <?php foreach ($item['SUBITEMS'] as $subItem):?>
+                    <?php foreach ($item['SUBITEMS'] as $subItem) { ?>
                         <li><a href="<?= $subItem['LINK']; ?>"><?= $subItem['TEXT']; ?></a></li>
-                    <?php endforeach; ?>
+                    <?php }; ?>
                 </ul>
-            <?php endif; ?>
+            <?php }; ?>
             </li>
-        <?php endforeach; ?>
+        <?php }; ?>
     </ul>
 </nav>
-<?php endif; ?>
-
-
+<?php }; ?>
