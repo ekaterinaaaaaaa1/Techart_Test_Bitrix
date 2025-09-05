@@ -54,7 +54,7 @@ header {
 }
 
 nav {
-    width: 280px;
+    width: 450px;
     padding-right: 10%;
 }
 
@@ -81,24 +81,25 @@ nav {
     visibility: hidden;
     position: absolute;
     z-index: 10;
-    width: 100px;
+    width: 150px;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #2C145E;
-    background-color: #FFF;
+    border: 1px solid #9B407A;
+    border-radius: 5px;
+    background-color: #841844;
 }
 
 ul li:hover {
     a {
-        color: #2C145E;
+        color: #841844;
     }
     .submenu {
         visibility: visible;
         a {
-            color: #000;
+            color: #FFF;
         }
         a:hover {
-            color: #2C145E;
+            color: #000;
         }
     }
 }
