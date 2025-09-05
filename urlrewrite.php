@@ -1,11 +1,43 @@
 <?php
 $arUrlRewrite=array (
-  11 => 
+  7 => 
   array (
     'CONDITION' => '#^/news/(\d+)/$#',
     'RULE' => 'ELEMENT_ID=$1',
     'ID' => NULL,
     'PATH' => '/news/detail.php',
+    'SORT' => 100,
+  ),
+  8 => 
+  array (
+    'CONDITION' => '#^/news/page-(\d+)/$#',
+    'RULE' => 'PAGEN_1=$1',
+    'ID' => NULL,
+    'PATH' => '/news/index.php',
+    'SORT' => 100,
+  ),
+  9 => 
+  array (
+    'CONDITION' => '#^/news/theme-(\d+)/page-(\d+)/$#',
+    'RULE' => 'PAGEN_2=$2&THEME_ID=$1',
+    'ID' => NULL,
+    'PATH' => '/news/index.php',
+    'SORT' => 100,
+  ),
+  10 => 
+  array (
+    'CONDITION' => '#^/techart/contacts/$#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/techart/contacts.php',
+    'SORT' => 100,
+  ),
+  11 => 
+  array (
+    'CONDITION' => '#^/techart/$#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/techart/index.php',
     'SORT' => 100,
   ),
   5 => 
@@ -22,14 +54,6 @@ $arUrlRewrite=array (
     'RULE' => 'alias=$1&videoconf',
     'ID' => NULL,
     'PATH' => '/desktop_app/router.php',
-    'SORT' => 100,
-  ),
-  7 => 
-  array (
-    'CONDITION' => '#^/news/theme-(\d+)/page-(\d+/)#',
-    'RULE' => 'PAGEN_2=$2&THEME_ID=$1',
-    'ID' => NULL,
-    'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
   1 => 
@@ -62,30 +86,6 @@ $arUrlRewrite=array (
     'RULE' => '',
     'ID' => 'bitrix:stssync.server',
     'PATH' => '/bitrix/services/stssync/calendar/index.php',
-    'SORT' => 100,
-  ),
-  9 => 
-  array (
-    'CONDITION' => '#^/techart/contacts/#',
-    'RULE' => '',
-    'ID' => NULL,
-    'PATH' => '/techart/contacts.php',
-    'SORT' => 100,
-  ),
-  8 => 
-  array (
-    'CONDITION' => '#^/news/page-(\d+/)#',
-    'RULE' => 'PAGEN_1=$1',
-    'ID' => NULL,
-    'PATH' => '/news/index.php',
-    'SORT' => 100,
-  ),
-  10 => 
-  array (
-    'CONDITION' => '#^/techart#',
-    'RULE' => '',
-    'ID' => NULL,
-    'PATH' => '/techart/index.php',
     'SORT' => 100,
   ),
   2 => 
