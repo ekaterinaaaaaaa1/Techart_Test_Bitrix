@@ -15,7 +15,7 @@ $this->setFrameMode(true);
 <?php if ($arResult['ID']): ?>
 <div class="container">
     <div class="menu">
-        <a href="/news/index.php">
+        <a href="/news/">
             <span class="menu-news-title">Главная</span=>
         </a>
         <span class="menu-news-title"> / </span>
@@ -29,11 +29,11 @@ $this->setFrameMode(true);
             <?= isset($arResult['DETAIL_TEXT']) ? $arResult['DETAIL_TEXT'] : ''; ?>
             <? if (!empty($arResult['DISPLAY_PROPERTIES']['THEMES'])) { ?>
             <div>
-                <? $themes = array_map(fn($element) => "<a href=\"/news/index.php?THEME_ID=". $element['ID'] ."\">" . $element['NAME'] . "</a>", $arResult['DISPLAY_PROPERTIES']['THEMES']['LINK_ELEMENT_VALUE']); ?>
+                <? $themes = array_map(fn($element) => "<a href=\"/news/theme-". $element['ID'] ."/page-1/\">" . $element['NAME'] . "</a>", $arResult['DISPLAY_PROPERTIES']['THEMES']['LINK_ELEMENT_VALUE']); ?>
                 <span>Темы: <?= implode(", ", $themes) . "."; ?></span>
             </div>
             <? }; ?>
-            <a class="button news-button" href="/news/index.php">
+            <a class="button news-button" href="/news/">
                 <img class="button-arrow" src="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/reverse_arrow.svg"; ?>" data-active="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/active_reverse_arrow.svg"; ?>" alt="Стрелка"></img>
                 <span class="button-text">Назад к новостям</span>
             </a>

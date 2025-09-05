@@ -15,9 +15,10 @@ $pageSwitchButtonCount = $arResult["NavPageCount"] < $maxPageSwitchButtonCount ?
 $this->setFrameMode(true);
 ?>
 <?
+    $themeId = $_GET['THEME_ID'];
     $themeParam = "";
-    if (!empty($_GET['THEME_ID'])) {
-        $themeParam = "&THEME_ID=" . $_GET['THEME_ID'];
+    if (!empty($themeId)) {
+        $themeParam = "/theme-" . $themeId;
     }
 ?>
 <div class="page-switch-buttons">
@@ -25,7 +26,7 @@ $this->setFrameMode(true);
         <?php
         if ($arResult["NavPageNomer"] + $pageSwitchButtonCount <= $arResult["NavPageCount"] + 1) {
             for ($i = 0; $i < $pageSwitchButtonCount; $i++) { ?>
-                <a href="<?="/news/index.php?PAGEN_". $arResult["NavNum"] . "=" . $arResult["NavPageNomer"] + $i . $themeParam ?>">
+                <a href="<?="/news". $themeParam . "/page-" . $arResult["NavPageNomer"] + $i . "/" ?>">
                     <button class="button page-switch-button button-text">
                         <?= $arResult["NavPageNomer"] + $i; ?>
                     </button>
@@ -34,7 +35,7 @@ $this->setFrameMode(true);
         }
         else {
             for ($i = $pageSwitchButtonCount - 1; $i >= 0; $i--) { ?>
-                <a href="<?="/news/index.php?PAGEN_" . $arResult["NavNum"] . "=" . $arResult["NavPageCount"] - $i . $themeParam ?>">
+                <a href="<?="/news". $themeParam . "/page-" . $arResult["NavPageCount"] - $i . "/" ?>">
                     <button class="button page-switch-button button-text">
                         <?= $arResult["NavPageCount"] - $i; ?>
                     </button>
@@ -43,7 +44,7 @@ $this->setFrameMode(true);
         }
         ?>
     </div>
-    <a href="<?="/news/index.php?PAGEN_" . $arResult["NavNum"] . "=" . $arResult["NavPageNomer"] + 1 . $themeParam ?>">
+    <a href="<?="/news". $themeParam . "/page-" . $arResult["NavPageNomer"] + 1 . "/" ?>">
         <button class="button page-switch-button page-switch-button-arrow" <?php if ($arResult["NavPageNomer"] == $arResult["NavPageCount"]){?>style="display: none;"<?php } ?>>
             <img class="page-switch-button-arrow-img" src="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/next_page_arrow.svg"; ?>" data-active="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/active_next_page_arrow.svg"; ?>" alt="Стрелка"></img>
         </button>

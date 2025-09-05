@@ -17,7 +17,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<?$APPLICATION->ShowPanel();?>
 	</div>
     <header>
-        <a class="header-logo-link" href="/news/index.php" target="_self">
+        <a class="header-logo-link" href="/news/" target="_self">
             <img class="header-logo" src="<?=SITE_TEMPLATE_PATH?>/Resources/img/logo.svg" alt="Логотип"></img>
             <span class="header-logo-title">Галактический вестник</span>
         </a>

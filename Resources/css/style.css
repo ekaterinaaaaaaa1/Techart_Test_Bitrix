@@ -89,6 +89,10 @@ nav {
     background-color: #841844;
 }
 
+.submenu > li > a {
+    line-height: 1.8rem;
+}
+
 ul li:hover {
     a {
         color: #841844;
