@@ -1,0 +1,10 @@
+@import "../style.css";
+
+nav {
+    margin: 40px 0;
+}
+
+.themes a {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}

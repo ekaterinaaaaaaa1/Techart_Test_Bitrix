@@ -3,5 +3,13 @@
 main {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 300px;
+}
+
+main a {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
