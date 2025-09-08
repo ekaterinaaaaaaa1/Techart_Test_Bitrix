@@ -8,7 +8,54 @@ p {
     margin-bottom: 22px;
 }
 
+.authorized {
+    font-size: 1.2rem;
+}
+
+.alert-danger {
+    color: red;
+}
+
+input {
+    background-color: #FFF;
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    border-bottom: 2px solid gray;
+    border-left: 2px solid gray;
+    width: 420px;
+    height: 2rem;
+    box-sizing: border-box;
+}
+
+input:focus {
+    background-color: #FFF;
+    outline: none;
+    border-top: 2px solid #9B407A;
+    border-right: 2px solid #9B407A;
+    border-bottom: 2px solid #9B407A;
+    border-left: 2px solid #9B407A;
+    border-radius: 3px;
+}
+
+.bx-authform-label-container {
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.button {
+    font-weight: 600;
+    color: #841844;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.button:hover {
+    color: #FFF;
+    background-color: #841844;
+}
+
 .news-button {
+    border-radius: 50px;
     width: 283px;
     margin: 40px 0;
 }

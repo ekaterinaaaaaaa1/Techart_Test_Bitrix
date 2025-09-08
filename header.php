@@ -37,4 +37,10 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 "USE_EXT" => "Y"
             )
         );?>
+        <? if ($USER->IsAuthorized()) { ?>
+            <div class="user">
+                <div class="user-name"><?= $USER->GetFullName();?></div>
+                <div class="user-logout"><a href="/?logout=yes&<?=bitrix_sessid_get()?>">Выйти</a></div>
+            </div>
+        <?}; ?>
     </header>

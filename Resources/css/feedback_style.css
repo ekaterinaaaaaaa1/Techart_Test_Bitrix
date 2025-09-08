@@ -1,0 +1,53 @@
+@import "style.css";
+
+h1 {
+    margin: 54px 0 60px 0;
+}
+
+.mf-text {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+}
+
+.mf-req {
+    color: #841844;
+}
+
+.mf-field {
+    width: 420px;
+    box-sizing: border-box;
+}
+
+input.mf-field, select.mf-field {
+    height: 2rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    background-color: #FFF;
+    outline: none;
+    border-top: 2px solid #9B407A;
+    border-right: 2px solid #9B407A;
+    border-bottom: 2px solid #9B407A;
+    border-left: 2px solid #9B407A;
+    border-radius: 3px;
+}
+
+.mf-ok-text {
+    color: green;
+}
+
+.button {
+    font-weight: 600;
+    color: #841844;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.button:active {
+    border-radius: 50px;
+}
+
+.button:hover {
+    color: #FFF;
+    background-color: #841844;
+}
