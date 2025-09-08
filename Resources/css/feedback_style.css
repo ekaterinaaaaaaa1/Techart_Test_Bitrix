@@ -43,10 +43,6 @@ input:focus, textarea:focus, select:focus {
     margin: 40px 0;
 }
 
-.button:active {
-    border-radius: 50px;
-}
-
 .button:hover {
     color: #FFF;
     background-color: #841844;
