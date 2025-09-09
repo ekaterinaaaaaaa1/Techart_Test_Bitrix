@@ -1,6 +1,9 @@
 <?
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
+
+\TAO::frontendCss('index');
+\TAO::frontendJs('index');
 ?>
 
 <!DOCTYPE html>
@@ -16,12 +19,9 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	<div id="panel">
 		<?$APPLICATION->ShowPanel();?>
 	</div>
-    <header>
-        <a class="header-logo-link" href="/news/" target="_self">
-            <img class="header-logo" src="<?=SITE_TEMPLATE_PATH?>/Resources/img/logo.svg" alt="Логотип"></img>
-            <span class="header-logo-title">Галактический вестник</span>
-        </a>
-        <?$APPLICATION->IncludeComponent(
+    <?
+        ob_start();
+        $APPLICATION->IncludeComponent(
             "bitrix:menu",
             "top_menu",
             Array(
@@ -36,11 +36,12 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 "ROOT_MENU_TYPE" => "top",
                 "USE_EXT" => "Y"
             )
-        );?>
-        <? if ($USER->IsAuthorized()) { ?>
-            <div class="user">
-                <div class="user-name"><?= $USER->GetFullName();?></div>
-                <div class="user-logout"><a href="/?logout=yes&<?=bitrix_sessid_get()?>">Выйти</a></div>
-            </div>
-        <?}; ?>
-    </header>
+        );
+        $nav = ob_get_clean();
+    ?>
+    <?=
+        \TAO::frontend()->renderBlock(
+            'common/header',
+            ["nav" => $nav, "user" => $USER]
+        )
+    ?>
