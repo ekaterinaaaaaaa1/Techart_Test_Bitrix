@@ -27,7 +27,7 @@ input {
     box-sizing: border-box;
 }
 
-input:focus {
+input[type="text"]:focus {
     background-color: #FFF;
     outline: none;
     border-top: 2px solid #9B407A;
