@@ -1,0 +1,30 @@
+@use "style" as *;
+
+$block-name: "b-pagenavigation";
+
+.#{$block-name} {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 83px 0;
+	justify-content: end;
+
+	&__numbers {
+		display: flex;
+	}
+
+	&__number {
+		@include button;
+		@include button-text;
+
+		width: 56px;
+		height: 54px;
+	}
+
+	&__arrow {
+		width: 106px;
+	}
+
+	&__arrow-img {
+		width: 24px;
+	}
+}

@@ -354,37 +354,9 @@ img {
   max-width: 100%;
 }
 
-h1 {
-  font-weight: 600;
-  font-size: 4rem;
-}
-
-h2 {
-  font-weight: 600;
-  font-size: 2rem;
-}
-
 .container {
   width: 80%;
   margin: 0 auto;
-}
-
-.button {
-  display: flex;
-  width: 214px;
-  height: 54px;
-  border: 2px solid #9b407a;
-  border-radius: 50px;
-  background-color: #fff;
-  justify-content: center;
-  align-items: center;
-}
-
-.button-text {
-  font-weight: 600;
-  color: #841844;
-  text-transform: uppercase;
-  margin-right: 10px;
 }
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/banner/banner.scss ***!
@@ -570,4 +542,4 @@ h2 {
   margin: 54px 0 60px;
 }
 
-/*# sourceMappingURL=index.1757506442825.css.map*/
+/*# sourceMappingURL=index.1757508305289.css.map*/

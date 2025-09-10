@@ -1,1 +1,28 @@
 // Складируйте сюда все миксины, используемые на сайте
+@mixin h1 {
+	font-weight: 600;
+	font-size: 4rem;
+}
+
+@mixin h2 {
+	font-weight: 600;
+	font-size: 2rem;
+}
+
+@mixin button {
+	display: flex;
+	width: 214px;
+	height: 54px;
+	border: 2px solid $button-border-color;
+	border-radius: 50px;
+	background-color: $body-background-color;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin button-text {
+	font-weight: 600;
+	color: $button-color;
+	text-transform: uppercase;
+	margin-right: 10px;
+}
