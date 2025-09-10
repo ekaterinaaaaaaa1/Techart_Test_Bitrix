@@ -3,5 +3,17 @@
 $block-name: "b-footer";
 
 .#{$block-name} {
-	//
+	display: flex;
+	height: 180px;
+	justify-content: center;
+
+	&__border {
+		width: 80%;
+		border-top: 1px solid $block-border-color;
+	}
+
+	&__copyright {
+		display: block;
+		padding-top: 63.6px;
+	}
 }

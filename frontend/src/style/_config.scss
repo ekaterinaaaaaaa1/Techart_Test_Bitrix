@@ -1,17 +1,20 @@
+// Цвета, используемые на сайте (по возможности желательно придерживаться этого формата)
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #6c6e7b;
+
 // Пользовательские переменные
 $body-background-color: $color-white;
-$logo-title-color: #2C145E;
-$button-border-color: #9B407A;
+$logo-title-color: #2c145e;
+$button-color: #841844;
+$button-border-color: #9b407a;
+$block-border-color: $color-gray;
 
-$logo-title-font-family: 'Segoe UI', sans-serif;
-
-// Цвета, используемые на сайте (по возможности желательно придерживаться этого формата)
-$color-white: #FFF;
-$color-black: #000;
+$logo-title-font-family: "Segoe UI", sans-serif;
 
 // Основные параметры body (если не используете, удаляйте)
 $body-text-color: $color-black;
-$body-font-family: 'Open Sans', sans-serif;
+$body-font-family: "Open Sans", sans-serif;
 
 // Настройки сетки (если не используете, удаляйте)
 $grid-columns: 12;

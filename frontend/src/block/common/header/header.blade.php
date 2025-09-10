@@ -1,4 +1,4 @@
-<div class="{{ $block }}@if($class ?? false) {{ $class }}@endif">
+<header class="{{ $block }}">
     <a class="{{ $block->elem('link') }}" href="/news/" target="_self">
         <img class="{{ $block->elem('logo') }}" src="{{ \TAO::frontendUrl('img/logo.svg'); }}" alt="Логотип"></img>
         <span class="{{ $block->elem('title') }}">Галактический вестник</span>
@@ -12,4 +12,4 @@
             </div>
         @endif
     </div>
-</div>
+</header>

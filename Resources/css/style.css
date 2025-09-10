@@ -31,7 +31,7 @@ header {
     justify-content: space-between;
 } */
 
-.header-logo-link {
+/* .header-logo-link {
     display: inline-flex;
     width: 600px;
     gap: 24px;
@@ -50,9 +50,9 @@ header {
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.75rem;
     letter-spacing: 0.25rem;
-}
+}*/
 
-.header-right-panel {
+/* .header-right-panel {
     display: flex;
 }
 
@@ -110,9 +110,9 @@ ul li:hover {
             color: #000;
         }
     }
-}
+} */
 
-.user {
+/* .user {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,9 +122,9 @@ ul li:hover {
 
 .user-name {
     color: #9B407A;
-}
+} */
 
-footer {
+/* footer {
     display: flex;
     height: 180px;
     justify-content: center;
@@ -138,12 +138,12 @@ footer {
 .footer-copyright {
     display: block;
     padding-top: 63.6px;
-}
+} */
 
-.container {
+/* .container {
     width: 80%;
     margin: 0 auto;
-}
+} */
 
 h1 {
     font-weight: 600;

@@ -6,18 +6,21 @@ $block-name: "b-header";
 	display: flex;
 	justify-content: space-between;
 	height: 157px;
-	border-bottom: 1px solid #6C6E7B;
+	border-bottom: 1px solid $block-border-color;
+
 	&__link {
 		display: inline-flex;
 		align-items: center;
-    	justify-content: space-between;
+		justify-content: space-between;
 		width: 600px;
 		gap: 24px;
 		padding: 40px 0 43px 10%;
 	}
+
 	&__logo {
 		width: 93px;
 	}
+
 	&__title {
 		text-transform: uppercase;
 		color: $logo-title-color;
@@ -25,9 +28,11 @@ $block-name: "b-header";
 		font-size: 1.75rem;
 		letter-spacing: 0.25rem;
 	}
+
 	&__right-panel {
 		display: inline-flex;
 	}
+
 	&__user {
 		display: flex;
 		flex-direction: column;
@@ -35,6 +40,7 @@ $block-name: "b-header";
 		align-items: center;
 		margin-right: 2%;
 	}
+
 	&__name {
 		color: $button-border-color;
 	}
