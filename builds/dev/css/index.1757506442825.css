@@ -354,9 +354,73 @@ img {
   max-width: 100%;
 }
 
+h1 {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.button {
+  display: flex;
+  width: 214px;
+  height: 54px;
+  border: 2px solid #9b407a;
+  border-radius: 50px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-text {
+  font-weight: 600;
+  color: #841844;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/banner/banner.scss ***!
+  \****************************************************************************************************************************************************************************************************/
+.b-banner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 646px;
+  overflow: hidden;
+}
+.b-banner__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.b-banner__text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  z-index: 2;
+  padding-right: 10%;
+}
+.b-banner__title {
+  color: #fff;
+  margin-bottom: 30px;
+}
+.b-banner__announce {
+  color: #fff;
+  font-size: 2rem;
 }
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/footer/footer.scss ***!
@@ -462,5 +526,48 @@ img {
   line-height: 1.8rem;
   color: #fff;
 }
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/news-list/news-list.scss ***!
+  \**********************************************************************************************************************************************************************************************************/
+.b-news-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 80px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  justify-content: space-between;
+}
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/news/news.scss ***!
+  \************************************************************************************************************************************************************************************************/
+.b-news {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 48%;
+}
+.b-news__date {
+  display: block;
+  width: 118px;
+  padding: 6px 0;
+  background-color: #ecf2f5;
+  color: #6c6e7b;
+  border-radius: 20px;
+  text-align: center;
+}
+.b-news__title {
+  margin: 30px 0;
+}
+.b-news__announce {
+  flex-grow: 1;
+}
+.b-news__button {
+  margin-top: 30px;
+}
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/title/title.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+.b-title {
+  margin: 54px 0 60px;
+}
 
-/*# sourceMappingURL=index.1757489502765.css.map*/
+/*# sourceMappingURL=index.1757506442825.css.map*/

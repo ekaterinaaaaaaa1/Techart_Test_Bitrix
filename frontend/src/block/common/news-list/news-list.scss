@@ -1,0 +1,11 @@
+@use "style" as *;
+
+$block-name: "b-news-list";
+
+.#{$block-name} {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 80px;
+	column-gap: 40px;
+	justify-content: space-between;
+}

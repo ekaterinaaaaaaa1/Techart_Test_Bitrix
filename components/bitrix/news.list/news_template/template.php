@@ -13,19 +13,12 @@
 $this->setFrameMode(true);
 ?>
 <? if (!empty($arResult["ITEMS"])) { ?>
-	<div class="news-container">
-		<?php foreach ($arResult["ITEMS"] as $arItem) { ?>
-		<div class="news">
-			<span class="news-date"><?= isset($arItem["FIELDS"]["TAGS"]) ? date('d.m.Y', strtotime($arItem["FIELDS"]["TAGS"])) : ''; ?></span>
-			<h2 class="news-title"><?= isset($arItem["NAME"]) ? $arItem["NAME"] : ''; ?></h2>
-			<p class="news-announce"><?= isset($arItem["PREVIEW_TEXT"]) ? $arItem["PREVIEW_TEXT"] : ''; ?></p>
-			<a class="button news-button" href="/news/<?= $arItem["ID"] ?>/">
-				<span class="button-text">Подробнее </span>
-				<img class="button-arrow" src="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/arrow.svg"; ?>" data-active="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/active_arrow.svg"; ?>" alt="Стрелка"></img>
-			</a>
-		</div>
-		<?php } ?>
-	</div>
+	<?=
+		\TAO::frontend()->renderBlock(
+			'common/news-list',
+			["items" => $arResult["ITEMS"]]
+		)
+	?>
 <? if ($arParams["DISPLAY_BOTTOM_PAGER"]) { ?>
 	<?= $arResult["NAV_STRING"] ?>
 <? }; ?>

@@ -1,6 +1,7 @@
 // Цвета, используемые на сайте (по возможности желательно придерживаться этого формата)
 $color-white: #fff;
 $color-black: #000;
+$color-light-gray: #ecf2f5;
 $color-gray: #6c6e7b;
 
 // Пользовательские переменные
@@ -9,6 +10,7 @@ $logo-title-color: #2c145e;
 $button-color: #841844;
 $button-border-color: #9b407a;
 $block-border-color: $color-gray;
+$news-date-background-color: $color-light-gray;
 
 $logo-title-font-family: "Segoe UI", sans-serif;
 

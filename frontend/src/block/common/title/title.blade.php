@@ -1,0 +1,1 @@
+<h1 class="{{ $block }}"> {!! $title !!} </h1>

@@ -145,7 +145,7 @@ ul li:hover {
     margin: 0 auto;
 } */
 
-h1 {
+/* h1 {
     font-weight: 600;
     font-size: 4rem;
 }
@@ -153,9 +153,9 @@ h1 {
 h2 {
     font-weight: 600;
     font-size: 2rem;
-}
+} */
 
-.news-date {
+/* .news-date {
     display: block;
     width: 118px;
     padding: 6px 0px;
@@ -163,9 +163,9 @@ h2 {
     color: #6C6E7B;
     border-radius: 20px;
     text-align: center;
-}
+} */
 
-.button {
+/* .button {
     display: flex;
     border: 2px solid #9B407A;
     border-radius: 50px;
@@ -179,12 +179,12 @@ h2 {
     color: #841844;
     text-transform: uppercase;
     margin-right: 10px;
-}
+} */
 
-.news-button {
+/* .news-button {
     width: 214px;
     height: 54px;
-}
+} */
 
 .button-active {
     background-color: #841844;

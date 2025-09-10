@@ -14,11 +14,10 @@ $this->setFrameMode(true);
 ?>
 
 <?php if(!empty($arResult["ITEMS"][0])): ?>
-<div class="news-banner">
-    <img class="news-banner-img" src="<?= $arResult["ITEMS"][0]["DETAIL_PICTURE"]["SRC"]; ?>" alt="Новость"></img>
-    <div class="news-banner-text">
-        <h1 class="news-banner-title"><?= $arResult["ITEMS"][0]["NAME"]; ?></h1>
-        <?= $arResult["ITEMS"][0]["PREVIEW_TEXT"]; ?>
-    </div>
-</div>
+    <?=
+        \TAO::frontend()->renderBlock(
+            'common/banner',
+            ["item" => $arResult['ITEMS'][0]]
+        )
+    ?>
 <?php endif; ?>
