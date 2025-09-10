@@ -20,6 +20,7 @@ $this->setFrameMode(true);
     if (!empty($themeId)) {
         $themeParam = "/theme-" . $themeId;
     }
+    PRINT_R($arResult);
 ?>
 <div class="page-switch-buttons">
     <div class="page-switch-buttons-numbers">

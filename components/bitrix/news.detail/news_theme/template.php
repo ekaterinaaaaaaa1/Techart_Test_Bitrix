@@ -12,4 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<h1>Новости на тему &laquo<?= $arResult["NAME"]?>&raquo</h1>
+<? $title = "Новости";
+    if (!empty($_GET["THEME_ID"])) {
+        $title .= " на тему &laquo" . $arResult["NAME"] . "&raquo";
+    }
+?>
+<h1><?= $title ?></h1>
