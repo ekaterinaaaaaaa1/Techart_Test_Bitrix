@@ -41,9 +41,8 @@ $block-name: "b-news-detail";
 
 	&__arrow {
 		background-image: url("img/icons/reverse_arrow.svg");
-		background-repeat: no-repeat;
-		width: 26px;
-		height: 16px;
+
+		@include arrow;
 	}
 
 	&__button-text {

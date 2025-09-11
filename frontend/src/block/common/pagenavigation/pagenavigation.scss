@@ -27,7 +27,9 @@ $block-name: "b-pagenavigation";
 
 	&__arrow-img {
 		background-image: url("img/icons/next_page_arrow.svg");
-		background-repeat: no-repeat;
+
+		@include arrow;
+
 		width: 24px;
 		height: 22px;
 	}

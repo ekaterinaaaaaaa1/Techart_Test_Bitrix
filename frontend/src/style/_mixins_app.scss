@@ -57,3 +57,11 @@
 	text-transform: uppercase;
 	margin-right: 10px;
 }
+
+@mixin arrow {
+	background-repeat: no-repeat;
+	border: none;
+	outline: 0;
+	width: 26px;
+	height: 16px;
+}

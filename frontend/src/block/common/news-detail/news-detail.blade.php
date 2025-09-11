@@ -3,10 +3,9 @@
         <span class="{{ $block->elem('date') }}">{!! isset($arResult['TAGS']) ? date('d.m.Y', strtotime($arResult['TAGS'])) : '' !!}</span>
         <h2 class="{{ $block->elem('announce') }}">{!! isset($arResult['PREVIEW_TEXT']) ? $arResult['PREVIEW_TEXT'] : '' !!}</h2>
         <div class="{{ $block->elem('detail-text') }}">{!! isset($arResult['DETAIL_TEXT']) ? $arResult['DETAIL_TEXT'] : '' !!}</div>
-        @if (!empty($arResult['DISPLAY_PROPERTIES']['THEMES']))
+        @if (!empty($arResult['THEMES_STRING']))
             <div class="{{ $block->elem('themes') }}">
-                @php $themes = array_map(fn($element) => "<a href=\"/news/theme-". $element['ID'] ."/page-1/\">" . $element['NAME'] . "</a>", $arResult['DISPLAY_PROPERTIES']['THEMES']['LINK_ELEMENT_VALUE']) @endphp
-                <span class="{{ $block->elem('theme-string') }}">Темы: {!! implode(", ", $themes) . "." !!}</span>
+                <span class="{{ $block->elem('theme-string') }}">{!! $arResult['THEMES_STRING'] !!}</span>
             </div>
         @endif
         <a class="{{ $block->elem('button')->mod('active') }}" href="/news/">
