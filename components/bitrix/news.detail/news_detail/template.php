@@ -12,27 +12,18 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?php if ($arResult['ID']): ?>
-<div class="container">
-    <div class="menu">
-        <a href="/news/">
-            <span class="menu-news-title">Главная</span=>
-        </a>
-        <span class="menu-news-title"> / </span>
-        <span><?= isset($arResult['NAME']) ? $arResult['NAME'] : ''; ?></span>
-    </div>
-    <? $title = isset($arResult['NAME']) ? $arResult['NAME'] : ''; ?>
-    <?=
-        \TAO::frontend()->renderBlock(
-            'common/title',
-            ["title" => $title]
-        )
-    ?>
-    <?=
-        \TAO::frontend()->renderBlock(
-            'common/news-detail',
-            ["arResult" => $arResult]
-        )
-    ?>
-</div>
-<?php endif; ?>
+<?php if ($arResult['ID']) { ?>
+<? $title = isset($arResult['NAME']) ? $arResult['NAME'] : ''; ?>
+<?=
+    \TAO::frontend()->renderBlock(
+        'common/title',
+        ["title" => $title]
+    )
+?>
+<?=
+    \TAO::frontend()->renderBlock(
+        'common/news-detail',
+        ["arResult" => $arResult]
+    )
+?>
+<?php }; ?>
