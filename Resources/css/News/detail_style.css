@@ -1,5 +1,5 @@
 @import "../style.css";
-.news {
+/* .news {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +13,7 @@
 .news-img {
     width: 100%;
     object-fit: contain;
-}
+} */
 
 .menu {
     margin-top: 72px;
@@ -23,7 +23,7 @@
     color: #6C6E7B;
 }
 
-h1 {
+/* h1 {
     margin: 22px 0 63px 0;
 }
 
@@ -36,17 +36,17 @@ p {
     font-weight: 600;
     color: #841844;
     margin: 40px 0;
-}
+} */
 
 
-.news-button {
+/* .news-button {
     width: 283px;
     margin-top: 40px;
 }
 
 .button-text {
     margin: 0 0 0 10px;
-}
+} */
 
 @media (max-width: 1248px) {
     .news {

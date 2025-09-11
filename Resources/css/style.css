@@ -186,13 +186,13 @@ h2 {
     height: 54px;
 } */
 
-.button-active {
+/* .button-active {
     background-color: #841844;
 }
 
 .button-text-active {
     color: #FFF;
-}
+} */
 
 @media (max-width: 1200px) {
     header {

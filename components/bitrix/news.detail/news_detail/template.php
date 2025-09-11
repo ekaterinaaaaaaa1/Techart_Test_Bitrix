@@ -21,28 +21,18 @@ $this->setFrameMode(true);
         <span class="menu-news-title"> / </span>
         <span><?= isset($arResult['NAME']) ? $arResult['NAME'] : ''; ?></span>
     </div>
-    <h1><?= isset($arResult['NAME']) ? $arResult['NAME'] : ''; ?></h1>
-    <div class="news">
-        <div class="news-content news-message">
-            <span class="news-date"><?= isset($arResult['TAGS']) ? date('d.m.Y', strtotime($arResult['TAGS'])) : ''; ?></span>
-            <h2 class="news-announce"><?= isset($arResult['PREVIEW_TEXT']) ? $arResult['PREVIEW_TEXT'] : ''; ?></h2>
-            <?= isset($arResult['DETAIL_TEXT']) ? $arResult['DETAIL_TEXT'] : ''; ?>
-            <? if (!empty($arResult['DISPLAY_PROPERTIES']['THEMES'])) { ?>
-            <div>
-                <? $themes = array_map(fn($element) => "<a href=\"/news/theme-". $element['ID'] ."/page-1/\">" . $element['NAME'] . "</a>", $arResult['DISPLAY_PROPERTIES']['THEMES']['LINK_ELEMENT_VALUE']); ?>
-                <span>Темы: <?= implode(", ", $themes) . "."; ?></span>
-            </div>
-            <? }; ?>
-            <a class="button news-button" href="/news/">
-                <img class="button-arrow" src="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/reverse_arrow.svg"; ?>" data-active="<?= SITE_TEMPLATE_PATH . "/Resources/img/icons/active_reverse_arrow.svg"; ?>" alt="Стрелка"></img>
-                <span class="button-text">Назад к новостям</span>
-            </a>
-        </div>
-        <div class="news-content">
-            <div class="news-img-block">
-                <img class="news-img" src="<?= isset($arResult["DETAIL_PICTURE"]["SRC"]) ? $arResult["DETAIL_PICTURE"]["SRC"] : ''; ?>" alt="Новость">
-            </div>
-        </div>
-    </div>
+    <? $title = isset($arResult['NAME']) ? $arResult['NAME'] : ''; ?>
+    <?=
+        \TAO::frontend()->renderBlock(
+            'common/title',
+            ["title" => $title]
+        )
+    ?>
+    <?=
+        \TAO::frontend()->renderBlock(
+            'common/news-detail',
+            ["arResult" => $arResult]
+        )
+    ?>
 </div>
 <?php endif; ?>

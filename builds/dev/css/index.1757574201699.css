@@ -387,10 +387,14 @@ img {
   padding-right: 10%;
 }
 .b-banner__title {
+  font-weight: 600;
+  font-size: 4rem;
   color: #fff;
   margin-bottom: 30px;
 }
 .b-banner__announce {
+  font-weight: 600;
+  font-size: 2rem;
   color: #fff;
   font-size: 2rem;
 }
@@ -498,6 +502,75 @@ img {
   line-height: 1.8rem;
   color: #fff;
 }
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/news-detail/news-detail.scss ***!
+  \**************************************************************************************************************************************************************************************************************/
+.b-news-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 137px;
+}
+.b-news-detail__content {
+  flex-basis: 48%;
+}
+.b-news-detail__date {
+  display: block;
+  width: 118px;
+  padding: 6px 0;
+  background-color: #ecf2f5;
+  color: #6c6e7b;
+  border-radius: 20px;
+  text-align: center;
+}
+.b-news-detail__img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.b-news-detail__announce p {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #841844;
+  margin: 40px 0;
+}
+.b-news-detail__detail-text p {
+  margin-bottom: 22px;
+}
+.b-news-detail__button {
+  display: flex;
+  width: 214px;
+  height: 54px;
+  border: 2px solid #9b407a;
+  border-radius: 50px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  width: 283px;
+  margin-top: 40px;
+}
+.b-news-detail__arrow {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuMjkzMDE1IDguNzA3MTFDLTAuMDk3NTA5NCA4LjMxNjU4IC0wLjA5NzUwOTQgNy42ODM0MiAwLjI5MzAxNCA3LjI5MjlMNi42NTY5OCAwLjkyODkzNEM3LjA0NzUgMC41Mzg0MDkgNy42ODA2NyAwLjUzODQwOSA4LjA3MTE5IDAuOTI4OTM0QzguNDYxNzEgMS4zMTk0NiA4LjQ2MTcxIDEuOTUyNjIgOC4wNzExOSAyLjM0MzE1TDIuNDE0MzQgOEw4LjA3MTE5IDEzLjY1NjlDOC40NjE3MSAxNC4wNDc0IDguNDYxNzEgMTQuNjgwNSA4LjA3MTE5IDE1LjA3MTFDNy42ODA2NyAxNS40NjE2IDcuMDQ3NSAxNS40NjE2IDYuNjU2OTggMTUuMDcxMUwwLjI5MzAxNSA4LjcwNzExWk0yNiA5TDEuMDAwMTIgOUwxLjAwMDEyIDdMMjYgN0wyNiA5WiIgZmlsbD0iIzg0MTg0NCIvPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 16px;
+}
+.b-news-detail__button-text {
+  font-weight: 600;
+  color: #841844;
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin: 0 0 0 10px;
+}
+.b-news-detail:hover .b-news-detail__button--active {
+  background-color: #841844;
+}
+.b-news-detail:hover .b-news-detail__button-text--active {
+  color: #fff;
+}
+.b-news-detail:hover .b-news-detail__arrow--active {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuMjkzMDE1IDguNzA3MTFDLTAuMDk3NTA5IDguMzE2NTggLTAuMDk3NTA5IDcuNjgzNDIgMC4yOTMwMTUgNy4yOTI5TDYuNjU2OTggMC45Mjg5MzRDNy4wNDc1IDAuNTM4NDEgNy42ODA2NiAwLjUzODQwOSA4LjA3MTE5IDAuOTI4OTM0QzguNDYxNzEgMS4zMTk0NiA4LjQ2MTcxIDEuOTUyNjIgOC4wNzExOSAyLjM0MzE1TDIuNDE0MzQgOEw4LjA3MTE5IDEzLjY1NjlDOC40NjE3MSAxNC4wNDc0IDguNDYxNzEgMTQuNjgwNSA4LjA3MTE5IDE1LjA3MTFDNy42ODA2NyAxNS40NjE2IDcuMDQ3NSAxNS40NjE2IDYuNjU2OTggMTUuMDcxMUwwLjI5MzAxNSA4LjcwNzExWk0yNiA4TDI2IDlMMS4wMDAxMiA5TDEuMDAwMTIgOEwxLjAwMDEyIDdMMjYgN0wyNiA4WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==);
+}
 /*!**********************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/news-list/news-list.scss ***!
   \**********************************************************************************************************************************************************************************************************/
@@ -527,19 +600,116 @@ img {
   text-align: center;
 }
 .b-news__title {
+  font-weight: 600;
+  font-size: 2rem;
   margin: 30px 0;
 }
 .b-news__announce {
   flex-grow: 1;
 }
 .b-news__button {
+  display: flex;
+  width: 214px;
+  height: 54px;
+  border: 2px solid #9b407a;
+  border-radius: 50px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px;
+}
+.b-news__button-text {
+  font-weight: 600;
+  color: #841844;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+.b-news__arrow {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI1LjcwNyA4LjcwNzExQzI2LjA5NzUgOC4zMTY1OCAyNi4wOTc1IDcuNjgzNDIgMjUuNzA3IDcuMjkyOUwxOS4zNDMgMC45Mjg5MzRDMTguOTUyNSAwLjUzODQwOSAxOC4zMTkzIDAuNTM4NDA5IDE3LjkyODggMC45Mjg5MzRDMTcuNTM4MyAxLjMxOTQ2IDE3LjUzODMgMS45NTI2MiAxNy45Mjg4IDIuMzQzMTVMMjMuNTg1NyA4TDE3LjkyODggMTMuNjU2OUMxNy41MzgzIDE0LjA0NzQgMTcuNTM4MyAxNC42ODA1IDE3LjkyODggMTUuMDcxMUMxOC4zMTkzIDE1LjQ2MTYgMTguOTUyNSAxNS40NjE2IDE5LjM0MyAxNS4wNzExTDI1LjcwNyA4LjcwNzExWk0tOC43NDIyOGUtMDggOUwyNC45OTk5IDlMMjQuOTk5OSA3TDguNzQyMjhlLTA4IDdMLTguNzQyMjhlLTA4IDlaIiBmaWxsPSIjODQxODQ0Ii8+Cjwvc3ZnPgo=);
+  background-repeat: no-repeat;
+  border-style: none;
+  width: 26px;
+  height: 16px;
+}
+.b-news:hover .b-news__title {
+  color: #841844;
+}
+.b-news:hover .b-news__button--active {
+  background-color: #841844;
+}
+.b-news:hover .b-news__button-text--active {
+  color: #fff;
+}
+.b-news:hover .b-news__arrow--active {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNyAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgN0MwLjQ0NzcxNSA3IDQuODI4MjNlLTA4IDcuNDQ3NzIgMCA4Qy00LjgyODIzZS0wOCA4LjU1MjI4IDAuNDQ3NzE1IDkgMSA5TDEgN1pNMjYuNzA3IDguNzA3MTFDMjcuMDk3NSA4LjMxNjU4IDI3LjA5NzUgNy42ODM0MiAyNi43MDcgNy4yOTI5TDIwLjM0MyAwLjkyODkzNEMxOS45NTI1IDAuNTM4NDA5IDE5LjMxOTMgMC41Mzg0MDkgMTguOTI4OCAwLjkyODkzNEMxOC41MzgzIDEuMzE5NDYgMTguNTM4MyAxLjk1MjYyIDE4LjkyODggMi4zNDMxNUwyNC41ODU3IDhMMTguOTI4OCAxMy42NTY5QzE4LjUzODMgMTQuMDQ3NCAxOC41MzgzIDE0LjY4MDUgMTguOTI4OCAxNS4wNzExQzE5LjMxOTMgMTUuNDYxNiAxOS45NTI1IDE1LjQ2MTYgMjAuMzQzIDE1LjA3MTFMMjYuNzA3IDguNzA3MTFaTTEgOUwyNS45OTk5IDlMMjUuOTk5OSA3TDEgN0wxIDlaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K);
+}
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/pagenavigation/pagenavigation.scss ***!
+  \********************************************************************************************************************************************************************************************************************/
+.b-pagenavigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 83px 0;
+  justify-content: end;
+}
+.b-pagenavigation__numbers {
+  display: flex;
+}
+.b-pagenavigation__number {
+  display: flex;
+  width: 214px;
+  height: 54px;
+  border: 2px solid #9b407a;
+  border-radius: 50px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #841844;
+  text-transform: uppercase;
+  margin-right: 10px;
+  width: 56px;
+  height: 54px;
+}
+.b-pagenavigation__number:hover {
+  background-color: #841844;
+  color: #fff;
+}
+.b-pagenavigation__arrow-img {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyNCAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMgMTBDMi40NDc3MiAxMCAyIDEwLjQ0NzcgMiAxMUMyIDExLjU1MjMgMi40NDc3MiAxMiAzIDEyTDMgMTBaTTE4LjQ2NiAxMS43MDcxQzE4Ljg1NjUgMTEuMzE2NiAxOC44NTY1IDEwLjY4MzQgMTguNDY2IDEwLjI5MjlMMTIuMTAyIDMuOTI4OTNDMTEuNzExNSAzLjUzODQxIDExLjA3ODMgMy41Mzg0MSAxMC42ODc4IDMuOTI4OTNDMTAuMjk3MyA0LjMxOTQ2IDEwLjI5NzMgNC45NTI2MiAxMC42ODc4IDUuMzQzMTVMMTYuMzQ0NyAxMUwxMC42ODc4IDE2LjY1NjlDMTAuMjk3MyAxNy4wNDc0IDEwLjI5NzMgMTcuNjgwNSAxMC42ODc4IDE4LjA3MTFDMTEuMDc4MyAxOC40NjE2IDExLjcxMTUgMTguNDYxNiAxMi4xMDIgMTguMDcxMUwxOC40NjYgMTEuNzA3MVpNMyAxMkwxNy43NTg5IDEyTDE3Ljc1ODkgMTBMMyAxMEwzIDEyWiIgZmlsbD0iIzg0MTg0NCIvPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 22px;
+}
+.b-pagenavigation__arrow {
+  display: flex;
+  width: 214px;
+  height: 54px;
+  border: 2px solid #9b407a;
+  border-radius: 50px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #841844;
+  text-transform: uppercase;
+  margin-right: 10px;
+  width: 106px;
+}
+.b-pagenavigation__arrow:hover {
+  background-color: #841844;
+  color: #fff;
+}
+.b-pagenavigation__arrow:hover .b-pagenavigation__arrow-img {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyNCAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMgMTBDMi40NDc3MiAxMCAyIDEwLjQ0NzcgMiAxMUMyIDExLjU1MjMgMi40NDc3MiAxMiAzIDEyTDMgMTBaTTE4LjQ2NiAxMS43MDcxQzE4Ljg1NjUgMTEuMzE2NiAxOC44NTY1IDEwLjY4MzQgMTguNDY2IDEwLjI5MjlMMTIuMTAyIDMuOTI4OTNDMTEuNzExNSAzLjUzODQxIDExLjA3ODMgMy41Mzg0MSAxMC42ODc4IDMuOTI4OTNDMTAuMjk3MyA0LjMxOTQ2IDEwLjI5NzMgNC45NTI2MiAxMC42ODc4IDUuMzQzMTVMMTYuMzQ0NyAxMUwxMC42ODc4IDE2LjY1NjlDMTAuMjk3MyAxNy4wNDc0IDEwLjI5NzMgMTcuNjgwNSAxMC42ODc4IDE4LjA3MTFDMTEuMDc4MyAxOC40NjE2IDExLjcxMTUgMTguNDYxNiAxMi4xMDIgMTguMDcxMUwxOC40NjYgMTEuNzA3MVpNMyAxMUwzIDEyTDE3Ljc1ODkgMTJMMTcuNzU4OSAxMUwxNy43NTg5IDEwTDMgMTBMMyAxMVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=);
 }
 /*!**************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/title/title.scss ***!
   \**************************************************************************************************************************************************************************************************/
 .b-title {
+  font-weight: 600;
+  font-size: 4rem;
   margin: 54px 0 60px;
 }
 
-/*# sourceMappingURL=index.1757508305289.css.map*/
+/*# sourceMappingURL=index.1757574201699.css.map*/

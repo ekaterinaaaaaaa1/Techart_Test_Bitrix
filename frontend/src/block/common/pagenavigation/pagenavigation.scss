@@ -18,13 +18,33 @@ $block-name: "b-pagenavigation";
 
 		width: 56px;
 		height: 54px;
-	}
 
-	&__arrow {
-		width: 106px;
+		&:hover {
+			@include button--active;
+			@include button-text--active;
+		}
 	}
 
 	&__arrow-img {
+		background-image: url("img/icons/next_page_arrow.svg");
+		background-repeat: no-repeat;
 		width: 24px;
+		height: 22px;
+	}
+
+	&__arrow {
+		@include button;
+		@include button-text;
+
+		width: 106px;
+
+		&:hover {
+			@include button--active;
+			@include button-text--active;
+
+			.#{$block-name}__arrow-img {
+				background-image: url("img/icons/active_next_page_arrow.svg");
+			}
+		}
 	}
 }

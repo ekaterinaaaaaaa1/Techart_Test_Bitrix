@@ -8,16 +8,12 @@ $block-name: "b-news";
 	flex-basis: 48%;
 
 	&__date {
-		display: block;
-		width: 118px;
-		padding: 6px 0;
-		background-color: $news-date-background-color;
-		color: $color-gray;
-		border-radius: 20px;
-		text-align: center;
+		@include date;
 	}
 
 	&__title {
+		@include h2;
+
 		margin: 30px 0;
 	}
 
@@ -26,6 +22,38 @@ $block-name: "b-news";
 	}
 
 	&__button {
+		@include button;
+
 		margin-top: 30px;
+	}
+
+	&__button-text {
+		@include button-text;
+	}
+
+	&__arrow {
+		background-image: url("img/icons/arrow.svg");
+		background-repeat: no-repeat;
+		border-style: none;
+		width: 26px;
+		height: 16px;
+	}
+
+	&:hover {
+		.#{$block-name}__title {
+			@include h2--active;
+		}
+
+		.#{$block-name}__button--active {
+			@include button--active;
+		}
+
+		.#{$block-name}__button-text--active {
+			@include button-text--active;
+		}
+
+		.#{$block-name}__arrow--active {
+			background-image: url("img/icons/active_arrow.svg");
+		}
 	}
 }
