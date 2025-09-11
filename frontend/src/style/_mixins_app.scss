@@ -12,18 +12,15 @@
 }
 
 @mixin h2--active {
-	color: #841844;
+	color: $button-color;
 }
 
 @mixin date {
 	display: block;
 	width: 118px;
 	padding: 6px 0;
-	background-color: #ecf2f5;
-
-	// background-color: $news-date-background-color;
-	// color: $color-gray;
-	color: #6c6e7b;
+	background-color: $news-date-background-color;
+	color: $color-gray;
 	border-radius: 20px;
 	text-align: center;
 }
@@ -32,30 +29,24 @@
 	display: flex;
 	width: 214px;
 	height: 54px;
-
-	// border: 2px solid $button-border-color;
-	border: 2px solid #9b407a;
+	border: 2px solid $button-border-color;
 	border-radius: 50px;
-
-	// background-color: $body-background-color;
-	background-color: #fff;
+	background-color: $body-background-color;
 	justify-content: center;
 	align-items: center;
 }
 
 @mixin button--active {
-	background-color: #841844;
+	background-color: $button-color;
 }
 
 @mixin button-text--active {
-	color: #fff;
+	color: $color-white;
 }
 
 @mixin button-text {
 	font-weight: 600;
-
-	// color: $button-color;
-	color: #841844;
+	color: $button-color;
 	text-transform: uppercase;
 	margin-right: 10px;
 }
