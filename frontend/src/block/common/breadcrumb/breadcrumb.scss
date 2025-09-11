@@ -3,5 +3,18 @@
 $block-name: "b-breadcrumb";
 
 .#{$block-name} {
-	//
+	margin-top: 72px;
+
+	&__elements {
+		display: flex;
+	}
+
+	&__element-link,
+	&__element-delimiter {
+		color: $color-gray;
+	}
+
+	&__element-delimiter {
+		margin: 0 2px;
+	}
 }

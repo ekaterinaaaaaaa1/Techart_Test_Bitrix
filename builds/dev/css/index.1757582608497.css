@@ -398,6 +398,21 @@ img {
   color: #fff;
   font-size: 2rem;
 }
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/breadcrumb/breadcrumb.scss ***!
+  \************************************************************************************************************************************************************************************************************/
+.b-breadcrumb {
+  margin-top: 72px;
+}
+.b-breadcrumb__elements {
+  display: flex;
+}
+.b-breadcrumb__element-link, .b-breadcrumb__element-delimiter {
+  color: #6c6e7b;
+}
+.b-breadcrumb__element-delimiter {
+  margin: 0 2px;
+}
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/footer/footer.scss ***!
   \****************************************************************************************************************************************************************************************************/
@@ -719,4 +734,4 @@ img {
   margin: 54px 0 60px;
 }
 
-/*# sourceMappingURL=index.1757576384244.css.map*/
+/*# sourceMappingURL=index.1757582608497.css.map*/

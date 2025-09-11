@@ -8,6 +8,7 @@
                 <li class="{{ $block->elem('element') }}">
                     <a class="{{ $block->elem('element-link') }}" href="{{ $item['LINK'] }}">{{ $item['TITLE'] ?? '' }}</a>
                 </li>
+                <span class="{{ $block->elem('element-delimiter') }}">/</span>
             @else
                 <li class="{{ $block->elem('last-element') }}">{{ $item['TITLE'] ?? '' }}</li>
             @endif
