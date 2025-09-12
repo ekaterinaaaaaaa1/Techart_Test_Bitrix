@@ -222,66 +222,17 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 		<div class="row">
 			<div class="col-md-6 col-sm-12">
 				<div class="product-item-detail-slider-container" id="<?=$itemIds['BIG_SLIDER_ID']?>">
-					
+					<img src="<?=$arResult['DETAIL_PICTURE']['SRC']?>" alt="Тур">
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12">
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="product-item-detail-info-section">
-							<?php
-							foreach ($arParams['PRODUCT_INFO_BLOCK_ORDER'] as $blockName)
-							{
-								switch ($blockName)
-								{
-									case 'props':
-										if (!empty($arResult['DISPLAY_PROPERTIES']) || $arResult['SHOW_OFFERS_PROPS'])
-										{
-											?>
-											<div class="product-item-detail-info-container">
-												<?php
-												if (!empty($arResult['DISPLAY_PROPERTIES']))
-												{
-													?>
-													<dl class="product-item-detail-properties">
-														<?php
-														foreach ($arResult['DISPLAY_PROPERTIES'] as $property)
-														{
-															if (isset($arParams['MAIN_BLOCK_PROPERTY_CODE'][$property['CODE']]))
-															{
-																?>
-																<dt><?=$property['NAME']?></dt>
-																<dd><?=(is_array($property['DISPLAY_VALUE'])
-																		? implode(' / ', $property['DISPLAY_VALUE'])
-																		: $property['DISPLAY_VALUE'])?>
-																</dd>
-																<?php
-															}
-														}
-														unset($property);
-														?>
-													</dl>
-													<?php
-												}
-
-												if ($arResult['SHOW_OFFERS_PROPS'])
-												{
-													?>
-													<dl class="product-item-detail-properties" id="<?=$itemIds['DISPLAY_MAIN_PROP_DIV']?>"></dl>
-													<?php
-												}
-												?>
-											</div>
-											<?php
-										}
-
-										break;
-								}
-							}
-							?>
-						</div>
-					</div>
-				</div>
+				<?
+				print_r(CIBlockElement::GetById($arResult['PROPERTIES']['COUNTRIES']['VALUE'][0])->getNext()['NAME']);
+				// foreach ($arResult['DISPLAY_PROPERTIES'][]) {
+					
+				// }
+				print_r($arResult['PROPERTIES']['subject']['VALUE']);
+				?>
 			</div>
 		</div>
 	</div>
