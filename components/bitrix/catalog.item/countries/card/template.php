@@ -36,46 +36,4 @@ use Bitrix\Main\Localization\Loc;
 
 		<?=$item['NAME']?>
 	</a>
-
-	<?
-	if (!empty($arParams['PRODUCT_BLOCKS_ORDER']))
-	{
-		foreach ($arParams['PRODUCT_BLOCKS_ORDER'] as $blockName)
-		{
-			switch ($blockName)
-			{
-				case 'props':
-					if (!$haveOffers)
-					{
-						if (!empty($item['DISPLAY_PROPERTIES']))
-						{
-							?>
-							<div class="product-item-info-container product-item-hidden" data-entity="props-block">
-								<dl class="product-item-properties">
-									<?
-									foreach ($item['DISPLAY_PROPERTIES'] as $code => $displayProperty)
-									{
-										?>
-										<dt<?=(!isset($item['PROPERTY_CODE_MOBILE'][$code]) ? ' class="hidden-xs"' : '')?>>
-											<?=$displayProperty['NAME']?>
-										</dt>
-										<dd<?=(!isset($item['PROPERTY_CODE_MOBILE'][$code]) ? ' class="hidden-xs"' : '')?>>
-											<?=(is_array($displayProperty['DISPLAY_VALUE'])
-												? implode(' / ', $displayProperty['DISPLAY_VALUE'])
-												: $displayProperty['DISPLAY_VALUE'])?>
-										</dd>
-										<?
-									}
-									?>
-								</dl>
-							</div>
-							<?
-						}
-					}
-					break;
-
-			}
-		}
-	}
-	?>
 </div>

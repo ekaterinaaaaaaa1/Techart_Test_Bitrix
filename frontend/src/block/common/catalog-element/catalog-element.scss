@@ -1,0 +1,16 @@
+@use "style" as *;
+
+$block-name: "b-catalog-element";
+
+.#{$block-name} {
+	display: flex;
+
+	&__content {
+		flex-basis: 48%;
+	}
+
+	&__property {
+		font-size: 2rem;
+		margin-bottom: 20px;
+	}
+}
