@@ -2,7 +2,7 @@
 
 /**
  * @var CBitrixComponentTemplate $this
- * @var CatalogTopComponent $component
+ * @var CatalogSectionComponent $component
  */
 
 $component = $this->getComponent();
