@@ -16,7 +16,7 @@ use Bitrix\Catalog\ProductTable;
  */
 
 $this->setFrameMode(true);
-$this->addExternalCss('/bitrix/css/main/bootstrap.css');
+//$this->addExternalCss('/bitrix/css/main/bootstrap.css');
 
 $templateLibrary = array('popup', 'fx', 'ui.fonts.opensans');
 $currencyList = '';
@@ -27,8 +27,6 @@ if (!empty($arResult['CURRENCIES']))
 	$currencyList = CUtil::PhpToJSObject($arResult['CURRENCIES'], false, true, true);
 }
 
-$haveOffers = !empty($arResult['OFFERS']);
-
 $templateData = [
 	'TEMPLATE_THEME' => $arParams['TEMPLATE_THEME'],
 	'TEMPLATE_LIBRARY' => $templateLibrary,
@@ -38,11 +36,6 @@ $templateData = [
 		'IBLOCK_ID' => $arResult['IBLOCK_ID'],
 	],
 ];
-if ($haveOffers)
-{
-	$templateData['ITEM']['OFFERS_SELECTED'] = $arResult['OFFERS_SELECTED'];
-	$templateData['ITEM']['JS_OFFERS'] = $arResult['JS_OFFERS'];
-}
 unset($currencyList, $templateLibrary);
 
 $mainId = $this->GetEditAreaId($arResult['ID']);
@@ -90,26 +83,6 @@ $title = !empty($arResult['IPROPERTY_VALUES']['ELEMENT_DETAIL_PICTURE_FILE_TITLE
 $alt = !empty($arResult['IPROPERTY_VALUES']['ELEMENT_DETAIL_PICTURE_FILE_ALT'])
 	? $arResult['IPROPERTY_VALUES']['ELEMENT_DETAIL_PICTURE_FILE_ALT']
 	: $arResult['NAME'];
-
-if ($haveOffers)
-{
-	$actualItem = $arResult['OFFERS'][$arResult['OFFERS_SELECTED']] ?? reset($arResult['OFFERS']);
-	$showSliderControls = false;
-
-	foreach ($arResult['OFFERS'] as $offer)
-	{
-		if ($offer['MORE_PHOTO_COUNT'] > 1)
-		{
-			$showSliderControls = true;
-			break;
-		}
-	}
-}
-else
-{
-	$actualItem = $arResult;
-	$showSliderControls = $arResult['MORE_PHOTO_COUNT'] > 1;
-}
 
 $skuProps = array();
 $price = $actualItem['ITEM_PRICES'][$actualItem['ITEM_PRICE_SELECTED']];
@@ -177,69 +150,46 @@ $arParams['MESS_SHOW_MAX_QUANTITY'] = $arParams['MESS_SHOW_MAX_QUANTITY'] ?: Loc
 $arParams['MESS_RELATIVE_QUANTITY_MANY'] = $arParams['MESS_RELATIVE_QUANTITY_MANY'] ?: Loc::getMessage('CT_BCE_CATALOG_RELATIVE_QUANTITY_MANY');
 $arParams['MESS_RELATIVE_QUANTITY_FEW'] = $arParams['MESS_RELATIVE_QUANTITY_FEW'] ?: Loc::getMessage('CT_BCE_CATALOG_RELATIVE_QUANTITY_FEW');
 
-$positionClassMap = array(
-	'left' => 'product-item-label-left',
-	'center' => 'product-item-label-center',
-	'right' => 'product-item-label-right',
-	'bottom' => 'product-item-label-bottom',
-	'middle' => 'product-item-label-middle',
-	'top' => 'product-item-label-top'
+// $positionClassMap = array(
+// 	'left' => 'product-item-label-left',
+// 	'center' => 'product-item-label-center',
+// 	'right' => 'product-item-label-right',
+// 	'bottom' => 'product-item-label-bottom',
+// 	'middle' => 'product-item-label-middle',
+// 	'top' => 'product-item-label-top'
+// );
+
+// $discountPositionClass = 'product-item-label-big';
+// if ($arParams['SHOW_DISCOUNT_PERCENT'] === 'Y' && !empty($arParams['DISCOUNT_PERCENT_POSITION']))
+// {
+// 	foreach (explode('-', $arParams['DISCOUNT_PERCENT_POSITION']) as $pos)
+// 	{
+// 		$discountPositionClass .= isset($positionClassMap[$pos]) ? ' '.$positionClassMap[$pos] : '';
+// 	}
+// }
+
+// $labelPositionClass = 'product-item-label-big';
+// if (!empty($arParams['LABEL_PROP_POSITION']))
+// {
+// 	foreach (explode('-', $arParams['LABEL_PROP_POSITION']) as $pos)
+// 	{
+// 		$labelPositionClass .= isset($positionClassMap[$pos]) ? ' '.$positionClassMap[$pos] : '';
+// 	}
+// }
+
+echo \TAO::frontend()->renderBlock(
+    'common/title',
+    ["title" => $name]
 );
 
-$discountPositionClass = 'product-item-label-big';
-if ($arParams['SHOW_DISCOUNT_PERCENT'] === 'Y' && !empty($arParams['DISCOUNT_PERCENT_POSITION']))
-{
-	foreach (explode('-', $arParams['DISCOUNT_PERCENT_POSITION']) as $pos)
-	{
-		$discountPositionClass .= isset($positionClassMap[$pos]) ? ' '.$positionClassMap[$pos] : '';
-	}
-}
+echo \TAO::frontend()->renderBlock(
+    'common/catalog-element',
+    ["arResult" => $arResult]
+);
 
-$labelPositionClass = 'product-item-label-big';
-if (!empty($arParams['LABEL_PROP_POSITION']))
-{
-	foreach (explode('-', $arParams['LABEL_PROP_POSITION']) as $pos)
-	{
-		$labelPositionClass .= isset($positionClassMap[$pos]) ? ' '.$positionClassMap[$pos] : '';
-	}
-}
 ?>
-<div class="bx-catalog-element bx-<?=$arParams['TEMPLATE_THEME']?>" id="<?=$itemIds['ID']?>"
-	itemscope itemtype="http://schema.org/Product">
-	<div class="container-fluid">
-		<?php
-		if ($arParams['DISPLAY_NAME'] === 'Y')
-		{
-			?>
-			<div class="row">
-				<div class="col-xs-12">
-					<h1 class="bx-title"><?=$name?></h1>
-				</div>
-			</div>
-			<?php
-		}
-		?>
-		<div class="row">
-			<div class="col-md-6 col-sm-12">
-				<div class="product-item-detail-slider-container" id="<?=$itemIds['BIG_SLIDER_ID']?>">
-					<img src="<?=$arResult['DETAIL_PICTURE']['SRC']?>" alt="Тур">
-				</div>
-			</div>
-			<div class="col-md-6 col-sm-12">
-				<?
-				print_r(CIBlockElement::GetById($arResult['PROPERTIES']['COUNTRIES']['VALUE'][0])->getNext()['NAME']);
-				// foreach ($arResult['DISPLAY_PROPERTIES'][]) {
-					
-				// }
-				print_r($arResult['PROPERTIES']['subject']['VALUE']);
-				?>
-			</div>
-		</div>
-	</div>
-
 	<meta itemprop="name" content="<?=$name?>" />
 	<meta itemprop="category" content="<?=$arResult['CATEGORY_PATH']?>" />
-</div>
 <?php
 
 $jsParams["IS_FACEBOOK_CONVERSION_CUSTOMIZE_PRODUCT_EVENT_ENABLED"] =

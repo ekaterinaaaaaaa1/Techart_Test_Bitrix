@@ -1,0 +1,23 @@
+@use "style" as *;
+
+$block-name: "b-catalog-item";
+
+.#{$block-name} {
+	flex-basis: 30%;
+	display: flex;
+	flex-direction: column;
+	height: 700px;
+	width: 700px;
+	justify-content: space-around;
+	align-items: center;
+
+	&__name {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	&__img {
+		width: 600px;
+		margin-bottom: 50px;
+	}
+}

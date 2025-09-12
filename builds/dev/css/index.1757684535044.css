@@ -413,6 +413,48 @@ img {
 .b-breadcrumb__element-delimiter {
   margin: 0 2px;
 }
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/catalog-element/catalog-element.scss ***!
+  \**********************************************************************************************************************************************************************************************************************/
+.b-catalog-element {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: space-around;
+  align-items: center;
+}
+.b-catalog-element__content {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+}
+.b-catalog-element__property {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/catalog-item/catalog-item.scss ***!
+  \****************************************************************************************************************************************************************************************************************/
+.b-catalog-item {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  width: 700px;
+  justify-content: space-around;
+  align-items: center;
+}
+.b-catalog-item__name {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.b-catalog-item__img {
+  width: 600px;
+  margin-bottom: 50px;
+}
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/catalog-section/catalog-section.scss ***!
+  \**********************************************************************************************************************************************************************************************************************/
+
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/footer/footer.scss ***!
   \****************************************************************************************************************************************************************************************************/
@@ -734,4 +776,4 @@ img {
   margin: 54px 0 60px;
 }
 
-/*# sourceMappingURL=index.1757585618656.css.map*/
+/*# sourceMappingURL=index.1757684535044.css.map*/

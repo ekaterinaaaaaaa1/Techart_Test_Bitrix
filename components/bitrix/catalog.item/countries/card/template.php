@@ -28,12 +28,8 @@ use Bitrix\Main\Localization\Loc;
  * @var string $labelPositionClass
  * @var CatalogSectionComponent $component
  */
-?>
 
-<div class="product-item">
-	<a class="product-item-image-wrapper" href="<?=$item['DETAIL_PAGE_URL']?>" title="<?=$imgTitle?>" data-entity="image-wrapper">
-		<img src="<?=$item['DETAIL_PICTURE']['SRC']?>" alt=""></img>
-
-		<?=$item['NAME']?>
-	</a>
-</div>
+echo \TAO::frontend()->renderBlock(
+    'common/catalog-item',
+    ["item" => $item]
+);

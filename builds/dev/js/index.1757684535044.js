@@ -10,6 +10,9 @@
 var map = {
 	"./banner/banner.scss": "./src/block/common/banner/banner.scss",
 	"./breadcrumb/breadcrumb.scss": "./src/block/common/breadcrumb/breadcrumb.scss",
+	"./catalog-element/catalog-element.scss": "./src/block/common/catalog-element/catalog-element.scss",
+	"./catalog-item/catalog-item.scss": "./src/block/common/catalog-item/catalog-item.scss",
+	"./catalog-section/catalog-section.scss": "./src/block/common/catalog-section/catalog-section.scss",
 	"./footer/footer.scss": "./src/block/common/footer/footer.scss",
 	"./header/header.scss": "./src/block/common/header/header.scss",
 	"./menu/menu.scss": "./src/block/common/menu/menu.scss",
@@ -62,6 +65,54 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************************!*\
   !*** ./src/block/common/breadcrumb/breadcrumb.scss ***!
   \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/common/catalog-element/catalog-element.scss":
+/*!***************************************************************!*\
+  !*** ./src/block/common/catalog-element/catalog-element.scss ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/common/catalog-item/catalog-item.scss":
+/*!*********************************************************!*\
+  !*** ./src/block/common/catalog-item/catalog-item.scss ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/common/catalog-section/catalog-section.scss":
+/*!***************************************************************!*\
+  !*** ./src/block/common/catalog-section/catalog-section.scss ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -316,4 +367,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=index.1757585618656.js.map
+//# sourceMappingURL=index.1757684535044.js.map

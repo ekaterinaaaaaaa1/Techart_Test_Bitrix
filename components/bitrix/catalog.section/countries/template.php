@@ -23,7 +23,7 @@ use Bitrix\Catalog\ProductTable;
  */
 
 $this->setFrameMode(true);
-$this->addExternalCss('/bitrix/css/main/bootstrap.css');
+//$this->addExternalCss('/bitrix/css/main/bootstrap.css');
 
 if (!empty($arResult['NAV_RESULT']))
 {
@@ -196,60 +196,40 @@ if ($showTopPager)
 		?>
 		<!-- items-container -->
 		<?
+		$itemComponents = [];
 		foreach ($arResult['ITEM_ROWS'] as $rowData)
 		{
 			$rowItems = array_splice($arResult['ITEMS'], 0, $rowData['COUNT']);
-			?>
-			<div class="row <?=$rowData['CLASS']?>" data-entity="items-row">
-				<?
-				switch ($rowData['VARIANT'])
-				{
-					case 2:
-						?>
-						<div class="col-xs-12 product-item-small-card">
-							<div class="row">
-								<?
-								foreach ($rowItems as $item)
-								{
-									?>
-									<div class="col-sm-4 product-item-big-card">
-										<div class="row">
-											<div class="col-md-12">
-												<?
-												$APPLICATION->IncludeComponent(
-													'bitrix:catalog.item',
-													'',
-													array(
-														'RESULT' => array(
-															'ITEM' => $item,
-															'AREA_ID' => $areaIds[$item['ID']],
-															'TYPE' => $rowData['TYPE'],
-															'BIG_LABEL' => 'N',
-															'BIG_DISCOUNT_PERCENT' => 'N',
-															'BIG_BUTTONS' => 'Y',
-															'SCALABLE' => 'N'
-														),
-														'PARAMS' => $generalParams + $itemParameters[$item['ID']],
-													),
-													$component,
-													array('HIDE_ICONS' => 'Y')
-												);
-												?>
-											</div>
-										</div>
-									</div>
-									<?
-								}
-								?>
-							</div>
-						</div>
-						<?
-						break;
-				}
-				?>
-			</div>
-			<?
+			foreach ($rowItems as $item)
+			{
+				ob_start();
+				$APPLICATION->IncludeComponent(
+					'bitrix:catalog.item',
+					'countries',
+					array(
+						'RESULT' => array(
+							'ITEM' => $item,
+							'AREA_ID' => $areaIds[$item['ID']],
+							'TYPE' => $rowData['TYPE'],
+							'BIG_LABEL' => 'N',
+							'BIG_DISCOUNT_PERCENT' => 'N',
+							'BIG_BUTTONS' => 'Y',
+							'SCALABLE' => 'N'
+						),
+						'PARAMS' => $generalParams + $itemParameters[$item['ID']],
+					),
+					$component,
+					array('HIDE_ICONS' => 'Y')
+				);
+				$itemComponents[] = ob_get_clean();
+			}
 		}
+
+		echo \TAO::frontend()->renderBlock(
+            'common/catalog-section',
+            ["itemComponents" => $itemComponents]
+        );
+
 		unset($rowItems);
 
 		unset($itemParameters);
