@@ -351,7 +351,7 @@
 				this.obPrice.price = BX(this.visual.PRICE_ID);
 				if (!this.obPrice.price && this.config.useCatalog)
 				{
-					this.errorCode = -16;
+					// this.errorCode = -16;
 				}
 				else
 				{
@@ -1953,7 +1953,7 @@
 
 			var newOffer = this.offers[index],
 				oldOffer = this.offers[this.offerNum];
-
+			
 			if (this.errorCode === 0)
 			{
 				this.canBuy = newOffer.CAN_BUY;

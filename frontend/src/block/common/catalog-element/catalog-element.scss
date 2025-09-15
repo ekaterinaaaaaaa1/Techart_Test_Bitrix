@@ -9,6 +9,14 @@ $block-name: "b-catalog-element";
 	align-items: center;
 
 	&__content {
+		flex-basis: 50%;
+	}
+
+	&__slider {
+		height: 500px;
+	}
+
+	&__content {
 		display: flex;
 		flex-direction: column;
 		flex-basis: 45%;

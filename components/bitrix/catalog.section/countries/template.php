@@ -232,11 +232,6 @@ if ($showTopPager)
 				$itemComponents[] = ob_get_clean();
 			}
 		}
-		echo \TAO::frontend()->renderBlock(
-            'common/catalog-section',
-            ["itemComponents" => $itemComponents,
-			"containerName" => $containerName]
-        );
 
 		unset($rowItems);
 
@@ -260,6 +255,14 @@ if ($showTopPager)
 		);
 	}
 	?>
+<?=\TAO::frontend()->renderBlock(
+	'common/catalog-section',
+	[
+		"arResult" => $arResult,
+		"itemComponents" => $itemComponents,
+		"containerName" => $containerName
+	]
+);?>
 <?
 if ($showLazyLoad)
 {

@@ -1,6 +1,13 @@
-<div class="{{ $block }}">
-    <div class="{{ $block->elem('content') }}" data-entity="images-container" style="cursor: zoom-in;">
-        <img class="{{ $block->elem('img') }}" id="{{ $itemIds['PICT'] }}" src="{{ $arResult['DETAIL_PICTURE']['SRC'] }}" data-entity="image" data-id="37"></img>
+<div class="{{ $block }} bx-catalog-element" id="{{ $itemIds['ID'] }}">
+    <div class="{{ $block->elem('content') }} product-item-detail-slider-container" id="{{ $itemIds['BIG_SLIDER_ID'] }}">
+        <span class="product-item-detail-slider-close" data-entity="close-popup"></span>
+        <div class="product-item-detail-slider-block" data-entity="images-slider-block">
+            <div class="product-item-detail-slider-images-container" data-entity="images-container">
+                <div class="{{ $block->elem('slider') }} product-item-detail-slider-image active" data-entity="image" data-id="{{ $itemIds['ID'] }}">
+                    <img class="{{ $block->elem('img') }}" id="{{ $itemIds['PICT'] }}" src="{{ $arResult['MORE_PHOTO'][0]['SRC'] }}" itemprop="image"></img>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="{{ $block->elem('content') }}">
         @if (!empty($arResult['COUNTRIES_STRING']))

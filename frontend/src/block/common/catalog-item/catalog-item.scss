@@ -13,13 +13,12 @@ $block-name: "b-catalog-item";
 	// align-items: center;
 	// border: 2px solid #000;
 
-	// &__name {
-	// 	font-size: 1.5rem;
-	// 	text-align: center;
-	// }
+	&__name {
+		font-size: 1.5rem;
+		text-align: center;
+	}
 
 	&__img {
-		width: 500px;
 		object-fit: cover;
 		padding: 50px;
 	}

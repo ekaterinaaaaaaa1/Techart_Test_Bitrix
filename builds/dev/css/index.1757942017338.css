@@ -423,6 +423,12 @@ img {
   align-items: center;
 }
 .b-catalog-element__content {
+  flex-basis: 50%;
+}
+.b-catalog-element__slider {
+  height: 500px;
+}
+.b-catalog-element__content {
   display: flex;
   flex-direction: column;
   flex-basis: 45%;
@@ -438,8 +444,11 @@ img {
   height: 500px;
   width: 500px;
 }
+.b-catalog-item__name {
+  font-size: 1.5rem;
+  text-align: center;
+}
 .b-catalog-item__img {
-  width: 500px;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 50px;
@@ -448,7 +457,7 @@ img {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/catalog-section/catalog-section.scss ***!
   \**********************************************************************************************************************************************************************************************************************/
 .b-catalog-section {
-  width: 520px;
+  width: 450px;
 }
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/footer/footer.scss ***!
@@ -771,4 +780,4 @@ img {
   margin: 54px 0 60px;
 }
 
-/*# sourceMappingURL=index.1757919897064.css.map*/
+/*# sourceMappingURL=index.1757942017338.css.map*/
