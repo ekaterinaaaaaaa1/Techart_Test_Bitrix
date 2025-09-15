@@ -7,7 +7,7 @@ $block-name: "b-catalog-item";
 	display: flex;
 	flex-direction: column;
 	height: 700px;
-	width: 700px;
+	width: 600px;
 	justify-content: space-around;
 	align-items: center;
 
@@ -17,7 +17,7 @@ $block-name: "b-catalog-item";
 	}
 
 	&__img {
-		width: 600px;
+		width: 500px;
 		margin-bottom: 50px;
 	}
 }

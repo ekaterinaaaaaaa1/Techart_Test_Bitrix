@@ -131,7 +131,6 @@ if ($showTopPager)
 }
 ?>
 
-<div class="catalog-section bx-<?=$arParams['TEMPLATE_THEME']?>" data-entity="<?=$containerName?>">
 	<?
 	if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
 	{
@@ -194,6 +193,15 @@ if ($showTopPager)
 			];
 		}
 		?>
+		<?
+		$title = "Туры";
+
+		echo \TAO::frontend()->renderBlock(
+			'common/title',
+			["title" => $title]
+		);
+		?>
+
 		<!-- items-container -->
 		<?
 		$itemComponents = [];
@@ -224,10 +232,10 @@ if ($showTopPager)
 				$itemComponents[] = ob_get_clean();
 			}
 		}
-
 		echo \TAO::frontend()->renderBlock(
             'common/catalog-section',
-            ["itemComponents" => $itemComponents]
+            ["itemComponents" => $itemComponents,
+			"containerName" => $containerName]
         );
 
 		unset($rowItems);
@@ -252,7 +260,6 @@ if ($showTopPager)
 		);
 	}
 	?>
-</div>
 <?
 if ($showLazyLoad)
 {

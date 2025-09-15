@@ -439,7 +439,7 @@ img {
   display: flex;
   flex-direction: column;
   height: 700px;
-  width: 700px;
+  width: 600px;
   justify-content: space-around;
   align-items: center;
 }
@@ -448,13 +448,17 @@ img {
   text-align: center;
 }
 .b-catalog-item__img {
-  width: 600px;
+  width: 500px;
   margin-bottom: 50px;
 }
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/catalog-section/catalog-section.scss ***!
   \**********************************************************************************************************************************************************************************************************************/
-
+.b-catalog-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/footer/footer.scss ***!
   \****************************************************************************************************************************************************************************************************/
@@ -776,4 +780,4 @@ img {
   margin: 54px 0 60px;
 }
 
-/*# sourceMappingURL=index.1757684535044.css.map*/
+/*# sourceMappingURL=index.1757914563741.css.map*/

@@ -3,5 +3,7 @@
 $block-name: "b-catalog-section";
 
 .#{$block-name} {
-	//
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }

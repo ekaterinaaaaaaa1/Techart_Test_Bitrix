@@ -16,3 +16,7 @@ if (!empty($arResult['PROPERTIES']['COUNTRIES']['VALUE'])) {
 if (!empty($arResult['PROPERTIES']['subject']['VALUE'])) {
     $arResult['SUBJECT_STRING'] = "Тематика тура: " . CIBlockElement::GetById($arResult['PROPERTIES']['subject']['VALUE'])->GetNext()['NAME'] . ".";
 }
+
+if (!empty($arResult['PROPERTIES']['TYPE']['VALUE'])) {
+    $arResult['TYPE_STRING'] = "Тип тура: " . CIBlockElement::GetById($arResult['PROPERTIES']['TYPE']['VALUE'])->GetNext()['NAME'] . ".";
+}
