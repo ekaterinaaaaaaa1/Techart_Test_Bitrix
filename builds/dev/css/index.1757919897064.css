@@ -435,29 +435,20 @@ img {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/catalog-item/catalog-item.scss ***!
   \****************************************************************************************************************************************************************************************************************/
 .b-catalog-item {
-  flex-basis: 30%;
-  display: flex;
-  flex-direction: column;
-  height: 700px;
-  width: 600px;
-  justify-content: space-around;
-  align-items: center;
-}
-.b-catalog-item__name {
-  font-size: 1.5rem;
-  text-align: center;
+  height: 500px;
+  width: 500px;
 }
 .b-catalog-item__img {
   width: 500px;
-  margin-bottom: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 50px;
 }
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/catalog-section/catalog-section.scss ***!
   \**********************************************************************************************************************************************************************************************************************/
 .b-catalog-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  width: 520px;
 }
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/footer/footer.scss ***!
@@ -780,4 +771,4 @@ img {
   margin: 54px 0 60px;
 }
 
-/*# sourceMappingURL=index.1757914563741.css.map*/
+/*# sourceMappingURL=index.1757919897064.css.map*/

@@ -31,5 +31,6 @@ use Bitrix\Main\Localization\Loc;
 
 echo \TAO::frontend()->renderBlock(
     'common/catalog-item',
-    ["item" => $item]
+    ["item" => $item,
+    "itemIds" => $itemIds]
 );

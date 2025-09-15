@@ -184,7 +184,8 @@ echo \TAO::frontend()->renderBlock(
 
 echo \TAO::frontend()->renderBlock(
     'common/catalog-element',
-    ["arResult" => $arResult]
+    ["arResult" => $arResult,
+	"itemIds" => $itemIds]
 );
 
 ?>
