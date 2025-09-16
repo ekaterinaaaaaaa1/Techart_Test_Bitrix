@@ -14,8 +14,13 @@ $block-name: "b-catalog-item";
 	// border: 2px solid #000;
 
 	&__name {
-		font-size: 1.5rem;
 		text-align: center;
+	}
+
+	&__name a {
+		font-family: $body-font-family;
+		font-size: 1.5rem;
+		color: $color-black;
 	}
 
 	&__img {

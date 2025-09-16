@@ -445,8 +445,12 @@ img {
   width: 500px;
 }
 .b-catalog-item__name {
-  font-size: 1.5rem;
   text-align: center;
+}
+.b-catalog-item__name a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  color: #000;
 }
 .b-catalog-item__img {
   -o-object-fit: cover;
@@ -780,4 +784,4 @@ img {
   margin: 54px 0 60px;
 }
 
-/*# sourceMappingURL=index.1757942017338.css.map*/
+/*# sourceMappingURL=index.1758000947322.css.map*/
