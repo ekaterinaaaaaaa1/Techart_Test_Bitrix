@@ -10,9 +10,10 @@
 var map = {
 	"./forms-button/forms-button.scss": "./src/block/forms/forms-button/forms-button.scss",
 	"./forms-checkbox/forms-checkbox.scss": "./src/block/forms/forms-checkbox/forms-checkbox.scss",
+	"./forms-form/forms-form.js": "./src/block/forms/forms-form/forms-form.js",
 	"./forms-form/forms-form.scss": "./src/block/forms/forms-form/forms-form.scss",
+	"./forms-input/forms-input.scss": "./src/block/forms/forms-input/forms-input.scss",
 	"./forms-select/forms-select.scss": "./src/block/forms/forms-select/forms-select.scss",
-	"./forms-text/forms-text.scss": "./src/block/forms/forms-text/forms-text.scss",
 	"./forms-textarea/forms-textarea.scss": "./src/block/forms/forms-textarea/forms-textarea.scss"
 };
 
@@ -70,6 +71,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/block/forms/forms-form/forms-form.js":
+/*!**************************************************!*\
+  !*** ./src/block/forms/forms-form/forms-form.js ***!
+  \**************************************************/
+/***/ (() => {
+
+document.querySelector('form').addEventListener('submit', function (event) {
+  console.log("отправка формы");
+});
+
+/***/ }),
+
 /***/ "./src/block/forms/forms-form/forms-form.scss":
 /*!****************************************************!*\
   !*** ./src/block/forms/forms-form/forms-form.scss ***!
@@ -86,10 +99,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/block/forms/forms-select/forms-select.scss":
-/*!********************************************************!*\
-  !*** ./src/block/forms/forms-select/forms-select.scss ***!
-  \********************************************************/
+/***/ "./src/block/forms/forms-input/forms-input.scss":
+/*!******************************************************!*\
+  !*** ./src/block/forms/forms-input/forms-input.scss ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -102,10 +115,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/block/forms/forms-text/forms-text.scss":
-/*!****************************************************!*\
-  !*** ./src/block/forms/forms-text/forms-text.scss ***!
-  \****************************************************/
+/***/ "./src/block/forms/forms-select/forms-select.scss":
+/*!********************************************************!*\
+  !*** ./src/block/forms/forms-select/forms-select.scss ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -230,4 +243,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=forms.1758024067433.js.map
+//# sourceMappingURL=forms.1758031449712.js.map
