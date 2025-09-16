@@ -245,10 +245,127 @@ echo \TAO::frontend()->renderBlock(
 echo \TAO::frontend()->renderBlock(
     'common/catalog-element',
     ["arResult" => $arResult,
-	"itemIds" => $itemIds]
+	"itemIds" => $itemIds,
+	"price" => $price]
 );
 
+print_r($actualItem);
 ?>
+
+<div class="product-item-detail-pay-block">
+<?php
+foreach ($arParams['PRODUCT_PAY_BLOCK_ORDER'] as $blockName)
+{
+	switch ($blockName)
+	{
+
+		case 'price':
+			?>
+			<div class="product-item-detail-info-container">
+				<?php
+				if ($arParams['SHOW_OLD_PRICE'] === 'Y')
+				{
+					?>
+					<div class="product-item-detail-price-old" id="<?=$itemIds['OLD_PRICE_ID']?>"
+						style="display: <?=($showDiscount ? '' : 'none')?>;">
+						<?=($showDiscount ? $price['PRINT_RATIO_BASE_PRICE'] : '')?>
+					</div>
+					<?php
+				}
+				?>
+				<div class="product-item-detail-price-current" id="<?=$itemIds['PRICE_ID']?>">
+					<?=$price['PRINT_RATIO_PRICE']?>
+				</div>
+				<?php
+				if ($arParams['SHOW_OLD_PRICE'] === 'Y')
+				{
+					?>
+					<div class="item_economy_price" id="<?=$itemIds['DISCOUNT_PRICE_ID']?>"
+						style="display: <?=($showDiscount ? '' : 'none')?>;">
+						<?php
+						if ($showDiscount)
+						{
+							echo Loc::getMessage('CT_BCE_CATALOG_ECONOMY_INFO2', array('#ECONOMY#' => $price['PRINT_RATIO_DISCOUNT']));
+						}
+						?>
+					</div>
+					<?php
+				}
+				?>
+			</div>
+			<?php
+			break;
+
+		case 'buttons':
+			?>
+			<div data-entity="main-button-container">
+				<div id="<?=$itemIds['BASKET_ACTIONS_ID']?>" style="display: <?=($actualItem['CAN_BUY'] ? '' : 'none')?>;">
+					<?php
+					if ($showAddBtn)
+					{
+						?>
+						<div class="product-item-detail-info-container">
+							<a class="btn <?=$showButtonClassName?> product-item-detail-buy-button" id="<?=$itemIds['ADD_BASKET_LINK']?>"
+								href="javascript:void(0);">
+								<span><?=$arParams['MESS_BTN_ADD_TO_BASKET']?></span>
+							</a>
+						</div>
+						<?php
+					}
+
+					if ($showBuyBtn)
+					{
+						?>
+						<div class="product-item-detail-info-container">
+							<a class="btn <?=$buyButtonClassName?> product-item-detail-buy-button" id="<?=$itemIds['BUY_LINK']?>"
+								href="javascript:void(0);">
+								<span><?=$arParams['MESS_BTN_BUY']?></span>
+							</a>
+						</div>
+						<?php
+					}
+					?>
+				</div>
+				<?php
+				if ($showSubscribe)
+				{
+					?>
+					<div class="product-item-detail-info-container">
+						<?php
+						$APPLICATION->IncludeComponent(
+							'bitrix:catalog.product.subscribe',
+							'',
+							array(
+								'CUSTOM_SITE_ID' => $arParams['CUSTOM_SITE_ID'] ?? null,
+								'PRODUCT_ID' => $arResult['ID'],
+								'BUTTON_ID' => $itemIds['SUBSCRIBE_LINK'],
+								'BUTTON_CLASS' => 'btn btn-default product-item-detail-buy-button',
+								'DEFAULT_DISPLAY' => !$actualItem['CAN_BUY'],
+								'MESS_BTN_SUBSCRIBE' => $arParams['~MESS_BTN_SUBSCRIBE'],
+							),
+							$component,
+							array('HIDE_ICONS' => 'Y')
+						);
+						?>
+					</div>
+					<?php
+				}
+				?>
+				<div class="product-item-detail-info-container">
+					<a class="btn btn-link product-item-detail-buy-button" id="<?=$itemIds['NOT_AVAILABLE_MESS']?>"
+						href="javascript:void(0)"
+						rel="nofollow" style="display: <?=(!$actualItem['CAN_BUY'] ? '' : 'none')?>;">
+						<?=$arParams['MESS_NOT_AVAILABLE']?>
+					</a>
+				</div>
+			</div>
+			<?php
+			break;
+	}
+}
+?>
+</div>
+
 	<meta itemprop="name" content="<?=$name?>" />
 	<meta itemprop="category" content="<?=$arResult['CATEGORY_PATH']?>" />
 <?php

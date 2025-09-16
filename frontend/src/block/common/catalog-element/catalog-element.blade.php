@@ -16,5 +16,13 @@
         @if (!empty($arResult['SUBJECT_STRING']))
             <span class="{{ $block->elem('property') }}">{!! $arResult['SUBJECT_STRING'] !!}</span>
         @endif
+        <div class="product-item-detail-pay-block">
+            <div class="product-item-detail-info-container">
+                <div class="product-item-detail-price-current" id="{{ $itemIds['PRICE_ID'] }}">
+					{!! $price['PRINT_RATIO_PRICE'] !!}
+				</div>
+            </div>
+            
+        </div>
     </div>
 </div>
