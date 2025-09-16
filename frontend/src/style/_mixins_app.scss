@@ -58,3 +58,28 @@
 	width: 26px;
 	height: 16px;
 }
+
+@mixin field {
+	height: 2rem;
+	width: 420px;
+	box-sizing: border-box;
+}
+
+@mixin field-name {
+	font-size: 1.3rem;
+	line-height: 2.2rem;
+}
+
+@mixin required {
+	color: $button-color;
+}
+
+@mixin form-focus {
+	background-color: $color-white;
+	outline: none;
+	border-top: 2px solid $button-border-color;
+	border-right: 2px solid $button-border-color;
+	border-bottom: 2px solid $button-border-color;
+	border-left: 2px solid $button-border-color;
+	border-radius: 3px;
+}

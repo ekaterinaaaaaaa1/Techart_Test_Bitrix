@@ -1,0 +1,21 @@
+@use "style" as *;
+
+$block-name: "b-forms-select";
+
+.#{$block-name} {
+	&__field-name {
+		@include field-name;
+	}
+
+	&__required {
+		@include required;
+	}
+
+	&__selection {
+		@include field;
+	}
+
+	&__selection:focus {
+		@include form-focus;
+	}
+}

@@ -1,0 +1,11 @@
+@use "style" as *;
+
+$block-name: "b-forms-checkbox";
+
+.#{$block-name} {
+	margin-top: 15px;
+
+	&__label {
+		font-size: 1rem;
+	}
+}

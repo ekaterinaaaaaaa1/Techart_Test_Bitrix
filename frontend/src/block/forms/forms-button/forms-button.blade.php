@@ -1,0 +1,1 @@
+<input class="{{ $block }}" type="submit" name="submit" value="{{ $buttonText }}">

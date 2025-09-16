@@ -1,0 +1,23 @@
+@use "style" as *;
+
+$block-name: "b-forms-textarea";
+
+.#{$block-name} {
+	&__field-name {
+		@include field-name;
+	}
+
+	&__required {
+		@include required;
+	}
+
+	&__message {
+		@include field;
+
+		height: 7rem;
+	}
+
+	&__message:focus {
+		@include form-focus;
+	}
+}

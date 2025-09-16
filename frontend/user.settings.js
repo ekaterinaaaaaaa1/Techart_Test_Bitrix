@@ -11,6 +11,7 @@ module.exports = {
 		index: ["./src/entry/index.js"],
 		// Пример создания дополнительной точки сборки
 		// main: ["./src/entry/main.js"],
+		forms: ["./src/entry/forms.js"],
 	},
 	stats: {},
 	https: false,
