@@ -25,6 +25,7 @@
 	"author": "web@techart.ru",
 	"license": "ISC",
 	"dependencies": {
+		"inputmask": "^5.0.9",
 		"normalize.css": "^8.0.1"
 	},
 	"devDependencies": {

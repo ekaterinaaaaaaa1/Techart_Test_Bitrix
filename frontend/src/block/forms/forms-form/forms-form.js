@@ -1,3 +1,10 @@
+import Inputmask from "inputmask/dist/inputmask.es6.js";
+
+var phone = document.getElementById("user_phone");
+
+var im = new Inputmask("+7(999) 999-99-99");
+im.mask(phone);
+
 document.querySelector('form').addEventListener('submit', function(form) {
 	var requireds = document.getElementsByClassName('required');
 	var messages = document.getElementsByClassName('b-forms-form__messages')[0];

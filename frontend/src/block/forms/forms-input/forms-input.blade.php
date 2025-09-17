@@ -4,5 +4,5 @@
             <span class="{{ $block->elem('required') }}">*</span>
         @endif
     </div>
-    <input class="{{ $block->elem('field') }} {{ (empty($required) || in_array($inArray, $required)) ? 'required' : '' }}" name="{{ $name }}" type="{{ $type }}"></input>
+    <input class="{{ $block->elem('field') }} {{ (empty($required) || in_array($inArray, $required)) ? 'required' : '' }}" id="{{ $name }}" name="{{ $name }}" type="{{ $type }}"></input>
 </div>
