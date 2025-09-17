@@ -4,7 +4,7 @@
             <span class="{{ $block->elem('required') }}">*</span>
         @endif
     </div>
-    <select class="{{ $block->elem('selection') }}">
+    <select class="{{ $block->elem('selection') }}" name="{{ $name }}">
         @foreach($items as $arItem)
             <option class="{{ $block->elem('selection-item') }}">{!! $arItem['NAME'] !!}</option>
         @endforeach

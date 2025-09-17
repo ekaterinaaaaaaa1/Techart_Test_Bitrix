@@ -4,5 +4,5 @@
             <span class="{{ $block->elem('required') }}">*</span>
         @endif
     </div>
-    <textarea class="{{ $block->elem('message') }}" name="MESSAGE" rows="5" cols="40">{!! ($arResult["MESSAGE"] ?? '') !!}</textarea>
+    <textarea class="{{ $block->elem('message') }} {{ (empty($required) || in_array($inArray, $required)) ? 'required' : '' }}" name="MESSAGE" rows="5" cols="40">{!! ($arResult["MESSAGE"] ?? '') !!}</textarea>
 </div>
