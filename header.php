@@ -15,6 +15,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     <? CJSCore::Init(array("fx")); ?>
     <title><?$APPLICATION->ShowTitle();?></title>
     <?$APPLICATION->ShowHead();?>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=ff912777-de95-4e47-bfee-8d17bd74a36f&lang=ru_RU"></script>
 </head>
 <body>
 	<div id="panel">
