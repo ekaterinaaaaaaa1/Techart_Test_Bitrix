@@ -78,43 +78,41 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (() => {
 
 document.querySelector('form').addEventListener('submit', function (form) {
-  var errorMessages = [];
   var requireds = document.getElementsByClassName('required');
+  var messages = document.getElementsByClassName('b-forms-form__messages')[0];
+  messages.innerHTML = '';
   for (const required of requireds) {
     switch (required.tagName.toLowerCase()) {
       case 'input':
         switch (required.type) {
           case 'text':
             if (required.value.trim().length <= 1) {
-              errorMessages.push('Поле "Ваше Имя" не заполнено!');
+              messages.innerHTML += '<span class="b-forms-form__message">Поле "Ваше Имя" не заполнено!</span>';
             }
             break;
           case 'email':
             if (required.value.trim().length <= 1) {
-              errorMessages.push('Поле "Ваш E-mail" не заполнено!');
+              messages.innerHTML += '<span class="b-forms-form__message">Поле "Ваш E-mail" не заполнено!</span>';
             }
             break;
           case 'checkbox':
             if (!required.checked) {
-              errorMessages.push('Согласие с условиями обязательно!');
+              messages.innerHTML += '<span class="b-forms-form__message">Согласие с условиями обязательно!</span>';
             }
             break;
         }
         break;
       case 'textarea':
         if (required.value.trim().length <= 1) {
-          errorMessages.push('Поле "Сообщение" не заполнено!');
+          messages.innerHTML += '<span class="b-forms-form__message">Поле "Сообщение" не заполнено!</span>';
         }
         break;
     }
   }
-  if (!(errorMessages.length === 0)) {
+  if (!(messages.innerHTML.length === 0)) {
     form.preventDefault();
-    var alertErrorMessage = '';
-    for (const errorMessage of errorMessages) {
-      alertErrorMessage += errorMessage + '\n';
-    }
-    alert(alertErrorMessage);
+  } else {
+    messages.innerHTML = '<span class="b-forms-form__message--true">Спасибо, Ваше сообщение принято!</span>';
   }
 });
 
@@ -280,4 +278,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=forms.1758089369574.js.map
+//# sourceMappingURL=forms.1758096043314.js.map

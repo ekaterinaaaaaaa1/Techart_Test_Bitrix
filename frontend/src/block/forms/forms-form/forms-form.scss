@@ -3,5 +3,13 @@
 $block-name: "b-forms-form";
 
 .#{$block-name} {
-	//
+	&__message {
+		display: block;
+		line-height: 1.5rem;
+		color: red;
+
+		&--true {
+			color: green;
+		}
+	}
 }
