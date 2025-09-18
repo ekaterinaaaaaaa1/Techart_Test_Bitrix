@@ -1,0 +1,28 @@
+@use "style" as *;
+
+$block-name: "b-maps";
+
+.#{$block-name} {
+	&__tabs {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__tab {
+		@include button;
+
+		border-radius: 0;
+
+		&-text {
+			@include button-text;
+		}
+
+		&--active {
+			@include button--active;
+
+			.#{$block-name}__tab-text {
+				@include button-text--active;
+			}
+		}
+	}
+}

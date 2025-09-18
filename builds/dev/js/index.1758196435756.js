@@ -17,6 +17,8 @@ var map = {
 	"./header/header.scss": "./src/block/common/header/header.scss",
 	"./map/map.js": "./src/block/common/map/map.js",
 	"./map/map.scss": "./src/block/common/map/map.scss",
+	"./maps/maps.js": "./src/block/common/maps/maps.js",
+	"./maps/maps.scss": "./src/block/common/maps/maps.scss",
 	"./menu/menu.scss": "./src/block/common/menu/menu.scss",
 	"./news-detail/news-detail.scss": "./src/block/common/news-detail/news-detail.scss",
 	"./news-list/news-list.scss": "./src/block/common/news-list/news-list.scss",
@@ -178,9 +180,147 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************/
 /***/ (() => {
 
+// async function initMap(mapElement) {
+// 	const latitude = mapElement.getAttribute('data-latitude');
+// 	const longitude = mapElement.getAttribute('data-longitude');
+
+// 	// Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+// 	await window.ymaps3.ready;
+
+// 	const {YMap, YMapDefaultSchemeLayer, YMapMarker, YMapDefaultFeaturesLayer} = window.ymaps3;
+// 	// const {YMapDefaultMarker} = await window.ymaps3.import('@yandex/ymaps3-default-ui-theme');
+
+// 	// Иницилиазируем карту
+// 	const map = new YMap(
+// 		// Передаём ссылку на HTMLElement контейнера
+// 		mapElement,
+
+// 		// Передаём параметры инициализации карты
+// 		{
+// 			location: {
+// 				// Координаты центра карты
+// 				center: [longitude, latitude],
+
+// 				// Уровень масштабирования
+// 				zoom: 17
+// 			}
+// 		}
+// 	);
+
+// 	// Добавляем слой для отображения схематической карты
+// 	map.addChild(new YMapDefaultSchemeLayer());
+// 	map.addChild(new YMapDefaultFeaturesLayer());
+
+// 	const marker = new YMapMarker (
+// 		{
+// 			coordinates: [longitude, latitude],
+// 			draggable: false,
+// 			mapFollowingOnDrag: true
+// 		},
+// 		markerElement
+// 	)
+
+// 	map.addChild(marker);
+// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+// 	const mapElement = document.getElementById('1');
+// 	const markerElement = document.querySelector('.b-map__marker');
+// 	// moscow = [37.630113, 55.679103];
+
+// 	if (mapElement != null && markerElement != null) {
+// 		initMap();
+
+// 		async function initMap() {
+// 			// Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+// 			await window.ymaps3.ready;
+
+// 			const {YMap, YMapDefaultSchemeLayer, YMapMarker, YMapDefaultFeaturesLayer} = window.ymaps3;
+// 			// const {YMapDefaultMarker} = await window.ymaps3.import('@yandex/ymaps3-default-ui-theme');
+
+// 			// Иницилиазируем карту
+// 			const map = new YMap(
+// 				// Передаём ссылку на HTMLElement контейнера
+// 				mapElement,
+
+// 				// Передаём параметры инициализации карты
+// 				{
+// 					location: {
+// 						// Координаты центра карты
+// 						center: [37.584685, 54.200802],
+
+// 						// Уровень масштабирования
+// 						zoom: 17
+// 					}
+// 				}
+// 			);
+
+// 			// Добавляем слой для отображения схематической карты
+// 			map.addChild(new YMapDefaultSchemeLayer());
+// 			map.addChild(new YMapDefaultFeaturesLayer());
+
+// 			const marker = new YMapMarker (
+// 				{
+// 					coordinates: [37.584685, 54.200802],
+// 					draggable: false,
+// 					mapFollowingOnDrag: true
+// 				},
+// 				markerElement
+// 			)
+
+// 			map.addChild(marker);
+
+// 			// document.querySelector('.b-map__marker-point').addEventListener('click', () => {
+// 			// 	const aboutElement = document.querySelector('.b-map__marker-about');
+
+// 			// 	if (aboutElement.classList.contains('b-map__marker-about--hidden')) {
+// 			// 		aboutElement.classList.remove('b-map__marker-about--hidden');
+// 			// 	}
+// 			// 	else {
+// 			// 		aboutElement.classList.add('b-map__marker-about--hidden');
+// 			// 	}
+// 			// });
+// 		}
+// 	}
+// });
+
+/***/ }),
+
+/***/ "./src/block/common/map/map.scss":
+/*!***************************************!*\
+  !*** ./src/block/common/map/map.scss ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/common/maps/maps.js":
+/*!***************************************!*\
+  !*** ./src/block/common/maps/maps.js ***!
+  \***************************************/
+/***/ (() => {
+
 document.addEventListener("DOMContentLoaded", () => {
-  initMap();
-  async function initMap() {
+  const mapsElement = document.getElementById('maps');
+  if (mapsElement != null) {
+    for (let i = 0; i < mapsElement.children.length; i++) {
+      const mapElement = document.getElementById("map_" + i);
+      initMap(mapElement);
+    }
+  }
+  async function initMap(mapElement) {
+    const markerElement = mapElement.querySelector('.b-map__marker');
+    const latitude = mapElement.getAttribute('data-latitude');
+    const longitude = mapElement.getAttribute('data-longitude');
+
     // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
     await window.ymaps3.ready;
     const {
@@ -189,17 +329,16 @@ document.addEventListener("DOMContentLoaded", () => {
       YMapMarker,
       YMapDefaultFeaturesLayer
     } = window.ymaps3;
-    // const {YMapDefaultMarker} = await window.ymaps3.import('@yandex/ymaps3-default-ui-theme');
 
     // Иницилиазируем карту
     const map = new YMap(
     // Передаём ссылку на HTMLElement контейнера
-    document.getElementById('map'),
+    mapElement,
     // Передаём параметры инициализации карты
     {
       location: {
         // Координаты центра карты
-        center: [37.584685, 54.200802],
+        center: [longitude, latitude],
         // Уровень масштабирования
         zoom: 17
       }
@@ -208,33 +347,42 @@ document.addEventListener("DOMContentLoaded", () => {
     // Добавляем слой для отображения схематической карты
     map.addChild(new YMapDefaultSchemeLayer());
     map.addChild(new YMapDefaultFeaturesLayer());
-
-    // const markerElement = document.createElement('div');
-    // markerElement.className = 'marker-class';
-    const markerElement = document.querySelector('.b-map__marker');
     const marker = new YMapMarker({
-      coordinates: [37.584685, 54.200802],
+      coordinates: [longitude, latitude],
       draggable: false,
       mapFollowingOnDrag: true
     }, markerElement);
     map.addChild(marker);
-    document.querySelector('.b-map__marker-point').addEventListener('click', () => {
-      const aboutElement = document.querySelector('.b-map__marker-about');
-      if (aboutElement.classList.contains('b-map__marker-about--hidden')) {
-        aboutElement.classList.remove('b-map__marker-about--hidden');
-      } else {
-        aboutElement.classList.add('b-map__marker-about--hidden');
-      }
+    mapElement.querySelectorAll('.b-map__marker-point').forEach(marker => {
+      marker.addEventListener('click', () => {
+        var aboutElement = mapElement.querySelector('.b-map__marker-about');
+        if (aboutElement.classList.contains('b-map__marker-about--hidden')) {
+          aboutElement.classList.remove('b-map__marker-about--hidden');
+        } else {
+          aboutElement.classList.add('b-map__marker-about--hidden');
+        }
+      });
     });
   }
+  document.querySelectorAll('.b-maps__tab').forEach(button => {
+    button.addEventListener('click', () => {
+      const activeButton = mapsElement.querySelectorAll('.b-maps__tab--active')[0];
+      activeButton.classList.remove('b-maps__tab--active');
+      button.classList.add('b-maps__tab--active');
+      const activeBlock = mapsElement.querySelectorAll('.b-map:not(.b-map--hidden)')[0];
+      activeBlock.classList.add('b-map--hidden');
+      const newActiveBlock = document.getElementById(button.getAttribute('data-map-id'));
+      newActiveBlock.classList.remove('b-map--hidden');
+    });
+  });
 });
 
 /***/ }),
 
-/***/ "./src/block/common/map/map.scss":
-/*!***************************************!*\
-  !*** ./src/block/common/map/map.scss ***!
-  \***************************************/
+/***/ "./src/block/common/maps/maps.scss":
+/*!*****************************************!*\
+  !*** ./src/block/common/maps/maps.scss ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -444,4 +592,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=index.1758181452574.js.map
+//# sourceMappingURL=index.1758196435756.js.map

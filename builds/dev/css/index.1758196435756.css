@@ -526,6 +526,9 @@ img {
 .b-map {
   width: 100%;
 }
+.b-map--hidden {
+  display: none;
+}
 .b-map__ymap {
   height: 600px;
   position: relative;
@@ -541,8 +544,6 @@ img {
 }
 .b-map__marker {
   position: absolute;
-  width: 300px;
-  height: 300px;
 }
 .b-map__marker-point {
   width: 20px;
@@ -570,6 +571,36 @@ img {
   color: #fff;
   font-size: 0.8rem;
   line-height: 1.1rem;
+}
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/maps/maps.scss ***!
+  \************************************************************************************************************************************************************************************************/
+.b-maps__tabs {
+  display: flex;
+  justify-content: flex-end;
+}
+.b-maps__tab {
+  display: flex;
+  width: 214px;
+  height: 54px;
+  border: 2px solid #9b407a;
+  border-radius: 50px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+}
+.b-maps__tab-text {
+  font-weight: 600;
+  color: #841844;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+.b-maps__tab--active {
+  background-color: #841844;
+}
+.b-maps__tab--active .b-maps__tab-text {
+  color: #fff;
 }
 /*!************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/menu/menu.scss ***!
@@ -836,4 +867,4 @@ img {
   margin: 54px 0 60px;
 }
 
-/*# sourceMappingURL=index.1758181452574.css.map*/
+/*# sourceMappingURL=index.1758196435756.css.map*/

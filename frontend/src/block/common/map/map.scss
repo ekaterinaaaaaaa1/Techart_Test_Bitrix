@@ -5,6 +5,10 @@ $block-name: "b-map";
 .#{$block-name} {
 	width: 100%;
 
+	&--hidden {
+		display: none;
+	}
+
 	&__ymap {
 		height: 600px;
 		position: relative;
@@ -23,8 +27,6 @@ $block-name: "b-map";
 
 	&__marker {
 		position: absolute;
-		width: 300px;
-		height: 300px;
 	}
 
 	&__marker-point {
@@ -32,7 +34,7 @@ $block-name: "b-map";
 		height: 20px;
 
 		// background-image: url("img/icons/Yandex_Maps_icon.png");
-		background-color: red;
+		background-color: $color-red;
 		border-radius: 50%;
 		position: absolute;
 		z-index: 10;
@@ -60,7 +62,3 @@ $block-name: "b-map";
 		line-height: 1.1rem;
 	}
 }
-
-// .hidden {
-// 	visibility: hidden;
-// }
