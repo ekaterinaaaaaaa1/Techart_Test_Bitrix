@@ -20,15 +20,47 @@ $block-name: "b-map";
 			line-height: 2rem;
 		}
 	}
+
+	&__marker {
+		position: absolute;
+		width: 300px;
+		height: 300px;
+	}
+
+	&__marker-point {
+		width: 20px;
+		height: 20px;
+
+		// background-image: url("img/icons/Yandex_Maps_icon.png");
+		background-color: red;
+		border-radius: 50%;
+		position: absolute;
+		z-index: 10;
+	}
+
+	&__marker-about {
+		width: 280px;
+		height: 91px;
+		margin-left: 30px;
+		padding: 10px;
+		background-color: $button-color;
+		border: 1px solid $button-border-color;
+		position: absolute;
+		z-index: 10;
+
+		&--hidden {
+			visibility: hidden;
+		}
+	}
+
+	&__marker-about-text {
+		display: block;
+		color: $color-white;
+		font-size: 0.8rem;
+		line-height: 1.1rem;
+	}
 }
 
-.marker-class {
-	width: 20px;
-	height: 20px;
-
-	// background-image: url("img/icons/Yandex_Maps_icon.png");
-	background-color: red;
-	border-radius: 50%;
-	position: absolute;
-	z-index: 10;
-}
+// .hidden {
+// 	visibility: hidden;
+// }

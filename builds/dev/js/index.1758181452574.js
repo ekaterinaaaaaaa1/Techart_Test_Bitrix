@@ -211,17 +211,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // const markerElement = document.createElement('div');
     // markerElement.className = 'marker-class';
-    const markerElement = document.querySelector('.marker-class');
+    const markerElement = document.querySelector('.b-map__marker');
     const marker = new YMapMarker({
       coordinates: [37.584685, 54.200802],
-      draggable: true,
+      draggable: false,
       mapFollowingOnDrag: true
     }, markerElement);
     map.addChild(marker);
-
-    // document.querySelector('.marker-class').addEventListener('click', function(form) {
-
-    // }):
+    document.querySelector('.b-map__marker-point').addEventListener('click', () => {
+      const aboutElement = document.querySelector('.b-map__marker-about');
+      if (aboutElement.classList.contains('b-map__marker-about--hidden')) {
+        aboutElement.classList.remove('b-map__marker-about--hidden');
+      } else {
+        aboutElement.classList.add('b-map__marker-about--hidden');
+      }
+    });
   }
 });
 
@@ -440,4 +444,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=index.1758174549562.js.map
+//# sourceMappingURL=index.1758181452574.js.map

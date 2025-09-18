@@ -29,14 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		map.addChild(new YMapDefaultSchemeLayer());
 		map.addChild(new YMapDefaultFeaturesLayer());
 
-		// const markerElement = document.createElement('div');
-		// markerElement.className = 'marker-class';
-		const markerElement = document.querySelector('.marker-class');
+		const markerElement = document.querySelector('.b-map__marker');
 
 		const marker = new YMapMarker (
 			{
 				coordinates: [37.584685, 54.200802],
-				draggable: true,
+				draggable: false,
 				mapFollowingOnDrag: true
 			},
 			markerElement
@@ -44,8 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		map.addChild(marker);
 
-		// document.querySelector('.marker-class').addEventListener('click', function(form) {
+		document.querySelector('.b-map__marker-point').addEventListener('click', () => {
+			const aboutElement = document.querySelector('.b-map__marker-about');
 
-		// }):
+			if (aboutElement.classList.contains('b-map__marker-about--hidden')) {
+				aboutElement.classList.remove('b-map__marker-about--hidden');
+			}
+			else {
+				aboutElement.classList.add('b-map__marker-about--hidden');
+			}
+		});
 	}
 });

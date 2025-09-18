@@ -539,14 +539,37 @@ img {
   display: block;
   line-height: 2rem;
 }
-
-.marker-class {
+.b-map__marker {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+.b-map__marker-point {
   width: 20px;
   height: 20px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
   z-index: 10;
+}
+.b-map__marker-about {
+  width: 280px;
+  height: 91px;
+  margin-left: 30px;
+  padding: 10px;
+  background-color: #841844;
+  border: 1px solid #9b407a;
+  position: absolute;
+  z-index: 10;
+}
+.b-map__marker-about--hidden {
+  visibility: hidden;
+}
+.b-map__marker-about-text {
+  display: block;
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
 }
 /*!************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/menu/menu.scss ***!
@@ -813,4 +836,4 @@ img {
   margin: 54px 0 60px;
 }
 
-/*# sourceMappingURL=index.1758174549562.css.map*/
+/*# sourceMappingURL=index.1758181452574.css.map*/
