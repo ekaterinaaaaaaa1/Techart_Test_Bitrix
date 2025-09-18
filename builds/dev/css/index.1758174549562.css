@@ -525,7 +525,28 @@ img {
   \**********************************************************************************************************************************************************************************************/
 .b-map {
   width: 100%;
+}
+.b-map__ymap {
   height: 600px;
+  position: relative;
+  z-index: 5;
+}
+.b-map__about {
+  width: 80%;
+  margin: 40px auto;
+}
+.b-map__about-text {
+  display: block;
+  line-height: 2rem;
+}
+
+.marker-class {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
 }
 /*!************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/menu/menu.scss ***!
@@ -792,4 +813,4 @@ img {
   margin: 54px 0 60px;
 }
 
-/*# sourceMappingURL=index.1758116878253.css.map*/
+/*# sourceMappingURL=index.1758174549562.css.map*/

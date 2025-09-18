@@ -25,8 +25,10 @@
 	"author": "web@techart.ru",
 	"license": "ISC",
 	"dependencies": {
+		"@yandex/ymaps3-default-ui-theme": "^0.0.19",
 		"inputmask": "^5.0.9",
-		"normalize.css": "^8.0.1"
+		"normalize.css": "^8.0.1",
+		"yandex": "^1.1.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.26.0",
