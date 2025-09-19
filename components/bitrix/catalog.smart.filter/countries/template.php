@@ -24,8 +24,8 @@ if (isset($templateData['TEMPLATE_THEME']))
 {
 	$this->addExternalCss($templateData['TEMPLATE_THEME']);
 }
-// $this->addExternalCss("/bitrix/css/main/bootstrap.css");
-// $this->addExternalCss("/bitrix/css/main/font-awesome.css");
+$this->addExternalCss("/bitrix/css/main/bootstrap.css");
+$this->addExternalCss("/bitrix/css/main/font-awesome.css");
 ?>
 
 <?

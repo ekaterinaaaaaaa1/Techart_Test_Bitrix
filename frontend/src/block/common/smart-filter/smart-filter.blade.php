@@ -43,17 +43,17 @@
 									</div>
 
 									<div class="col-xs-10 col-xs-offset-1 bx-ui-slider-track-container">
-										<div class="bx-ui-slider-track" id="drag_track_{{ $key }}">
-											@for($i = 0; $i <= $step_num; $i++):
-											<div class="bx-ui-slider-part p{{ $i+1 }}"><span>{!! $pricesArray[$key][$i] !!}</span></div>
+										<div class="bx-ui-slider-track" id="drag_track_{{ $arItem['ENCODED_ID'] }}">
+											@for($i = 0; $i <= $step_num; $i++)
+											<div class="bx-ui-slider-part p{{ $i+1 }}"><span>{!! $pricesArray[$arItem['ENCODED_ID']][$i] !!}</span></div>
 											@endfor
 
-											<div class="bx-ui-slider-pricebar-vd" style="left: 0;right: 0;" id="colorUnavailableActive_{{ $key }}"></div>
-											<div class="bx-ui-slider-pricebar-vn" style="left: 0;right: 0;" id="colorAvailableInactive_{{ $key }}"></div>
-											<div class="bx-ui-slider-pricebar-v"  style="left: 0;right: 0;" id="colorAvailableActive_{{ $key }}"></div>
-											<div class="bx-ui-slider-range" id="drag_tracker_{{ $key }}"  style="left: 0%; right: 0%;">
-												<a class="bx-ui-slider-handle left"  style="left:0;" href="javascript:void(0)" id="left_slider_{{ $key }}"></a>
-												<a class="bx-ui-slider-handle right" style="right:0;" href="javascript:void(0)" id="right_slider_{{ $key }}"></a>
+											<div class="bx-ui-slider-pricebar-vd" style="left: 0;right: 0;" id="colorUnavailableActive_{{ $arItem['ENCODED_ID'] }}"></div>
+											<div class="bx-ui-slider-pricebar-vn" style="left: 0;right: 0;" id="colorAvailableInactive_{{ $arItem['ENCODED_ID'] }}"></div>
+											<div class="bx-ui-slider-pricebar-v"  style="left: 0;right: 0;" id="colorAvailableActive_{{ $arItem['ENCODED_ID'] }}"></div>
+											<div class="bx-ui-slider-range" id="drag_tracker_{{ $arItem['ENCODED_ID'] }}"  style="left: 0%; right: 0%;">
+												<a class="bx-ui-slider-handle left"  style="left:0;" href="javascript:void(0)" id="left_slider_{{ $arItem['ENCODED_ID'] }}"></a>
+												<a class="bx-ui-slider-handle right" style="right:0;" href="javascript:void(0)" id="right_slider_{{ $arItem['ENCODED_ID'] }}"></a>
 											</div>
 										</div>
 									</div>
