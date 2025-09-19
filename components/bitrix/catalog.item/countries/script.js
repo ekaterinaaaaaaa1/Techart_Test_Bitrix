@@ -418,6 +418,7 @@
 	window.JCCatalogItem.prototype = {
 		init: function()
 		{
+			alert('Настя');
 			var i = 0,
 				treeItems = null;
 

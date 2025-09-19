@@ -38,12 +38,10 @@
 	}
 }
 .bx-filter .bx-filter-parameters-box-title span {
-	color: #039be5;
 	border-bottom: 1px solid transparent;
 	cursor: pointer;
 }
 .bx-filter .bx-filter-parameters-box-title span:hover {
-	border-color: #039be5;
 }
 .bx-filter .bx-filter-parameters-box.bx-active .bx-filter-parameters-box-title span {
 	/*color: #95a1a8;*/

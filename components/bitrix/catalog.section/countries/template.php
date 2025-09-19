@@ -260,7 +260,8 @@ if ($showTopPager)
 	[
 		"arResult" => $arResult,
 		"itemComponents" => $itemComponents,
-		"containerName" => $containerName
+		"containerName" => $containerName,
+		"arParams" => $arParams
 	]
 );?>
 <?
